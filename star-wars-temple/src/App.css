@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body::after {
+  background: url(https://damion.club/uploads/posts/2022-01/1641930245_61-damion-club-p-foni-black-star-67.jpg);
+  content: "";
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.Header {
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+.Container {
+  width: 1425px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.Header .Container .Logo {
+  padding-top: 30px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header .Container .Logo img{
+  width: 13%;
+}
+
+.Header .Container .NavLinks {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+.Header .Container .NavLinks a {
+  text-align: center;
+  color: #B5B7B7;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 15%;
+}
+
+.Header .Container .NavLinks a:hover {
+  transition: 1s;
+  color: red;
+}
+
+.Header .Container {
+  padding-bottom: 30px;
+}
+
+.Container .DataBank {
+  padding-top: 100px;
+}
+
+.Container .DataBank .FilterDataBank ul {
+  width: 20%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Container .DataBank .FilterDataBank ul li {
+  color: #B5B7B7;
+  text-transform: uppercase;
+  font-weight: 500;
+}
