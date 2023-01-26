@@ -2,12 +2,15 @@ import {configureStore} from '@reduxjs/toolkit';
 
 import navlinksSlice from './navlinksSlice';
 import titlesSlice from './titlesSlice';
+import currentHeroSlice from './currentHeroSlice';
 import universeSlice from './universeSlice';
+
 
 export const store = configureStore({
     reducer: {
         navLinks: navlinksSlice,
         titles: titlesSlice,
-        universe: universeSlice
+        universe: universeSlice,
+        currentHero: currentHeroSlice,
     }
 });
