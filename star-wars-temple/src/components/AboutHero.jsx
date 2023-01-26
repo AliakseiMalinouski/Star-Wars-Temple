@@ -71,6 +71,10 @@ export const AboutHero = React.memo(({currentHero})=> {
                             <div className="BigBorderHistory"></div>
                         </div>
                     {
+                        (currentHero.about === undefined || currentHero.about === null || currentHero.about === [])
+                        ?
+                        <div>loading</div>
+                        :
                         currentHero.about.map(e => <HistoryOfHero key={e.code} text={e.text} image={e.image} title={e.title}/>)
                     }
                 </div>
