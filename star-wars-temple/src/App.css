@@ -15,21 +15,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-body::after {
-  background: url(https://damion.club/uploads/posts/2022-01/1641930245_61-damion-club-p-foni-black-star-67.jpg);
-  content: "";
-  opacity: 1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
 a {
   text-decoration: none;
 }
@@ -39,7 +24,12 @@ li {
 }
 
 #root {
+  width: 100%;
   height: 100%;
+  background: url(https://damion.club/uploads/posts/2022-01/1641930245_61-damion-club-p-foni-black-star-67.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .Header {
@@ -255,4 +245,161 @@ li {
 .Container .HeroDetails .MoreAboutTheCharacter {
   width: 100%;
   padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .WrapperAppearances {
+  height: auto;
+  width: 20%;
+  border-right: 1px solid white;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .WrapperAppearances h3 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .WrapperAppearances .Appearances {
+  width: 100%;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .WrapperAppearances .Appearances li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .WrapperAffiliations {
+  height: auto;
+  width: 12%;
+  border-right: 1px solid white;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .WrapperAffiliations h3 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .WrapperAffiliations .Affiliations {
+  width: 100%;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .WrapperAffiliations .Affiliations li {
+  margin-bottom: 15px;
+  line-height: 30px;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .Gender {
+  width: auto;
+  padding-right: 28px;
+  border-right: 1px solid white;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .Gender h3 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .Gender p {
+  width: 100%;
+  font-size: 15px;
+}
+
+
+.Container .HeroDetails .MoreAboutTheCharacter .Species {
+  width: auto;
+  padding-right: 28px;
+  border-right: 1px solid white;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .Species h3 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .Species p {
+  width: 100%;
+  font-size: 15px;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .Vehicles {
+  width: auto;
+  padding-right: 28px;
+  border-right: 1px solid white;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .Vehicles h3 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .Vehicles p {
+  width: 100%;
+  font-size: 15px;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .Weapon {
+  width: auto;
+  padding-right: 28px;
+  border-right: 1px solid white;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .Weapon h3 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.Container .HeroDetails .MoreAboutTheCharacter .Weapon p {
+  width: 100%;
+  font-size: 15px;
+}
+
+.Container .HistoryOfHero {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.Container .HistoryOfHero h2 {
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.Container .HistoryOfHero .BordersHistoryTitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Container .HistoryOfHero .BordersHistoryTitle .BigBorderHistory {
+  border: 2px solid #48494a;
+  border-radius: 13px;
+  width: 95%;
+}
+
+.Container .HistoryOfHero .BordersHistoryTitle .SmallBorderHistory {
+  width: 3%;
+  border: 2px solid #48494a;
+  border-radius: 13px;
+}
+
+.Container .HistoryOfHero .Part {
+ 
+}
+
+.Container .HistoryOfHero .Part h3 {
+  font-size: 46px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.Container .HistoryOfHero .Part p {
+  font-size: 18px;
+  line-height: 35px;
+  margin-bottom: 30px;
+} 
+
+.Container .HistoryOfHero .Part img {
+  width: 100%;
 }
