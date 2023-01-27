@@ -10,13 +10,13 @@ html {
 }
 
 body {
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
   background: url(https://damion.club/uploads/posts/2022-01/1641930245_61-damion-club-p-foni-black-star-67.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 
