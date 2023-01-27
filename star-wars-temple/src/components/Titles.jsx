@@ -22,8 +22,6 @@ export const Titles = React.memo(({name, code, currentTitle}) => {
         starWarsEvents.emit("Select", name);
     }
 
-    console.log(currentTitle)
-
     if(name === currentTitle) {
         return (
             <li onClick={selectedCategory} className='SelectTitle'>

@@ -43,6 +43,7 @@ li {
   background-color: black;
   padding-left: 50px;
   padding-right: 50px;
+  height: 100%;
 }
 
 .Header .Container .Logo {

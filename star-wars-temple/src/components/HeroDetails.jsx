@@ -25,6 +25,7 @@ export const HeroDetails = React.memo(() => {
         dispatch(updateHero(findedHero));
     }, [universe, heroName, dispatch, currentHero]);
 
+    console.log(currentHero)
 
     return (
         <div className="HeroDetails">
