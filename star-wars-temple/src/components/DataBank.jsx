@@ -45,6 +45,7 @@ export const DataBank = React.memo(() => {
                         key={e.code}
                         code={e.code}
                         name={e.name}
+                        currentTitle={currentTitle}
                         />)
                     }
                 </ul>

@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import {starWarsEvents} from '../events';
 
 
-export const Titles = React.memo(({name, code}) => {
+export const Titles = React.memo(({name, code, currentTitle}) => {
 
     const universe = useSelector(state => state.universe.universe);
 
@@ -22,16 +22,34 @@ export const Titles = React.memo(({name, code}) => {
         starWarsEvents.emit("Select", name);
     }
 
-    return (
-        <li onClick={selectedCategory}>
-            {name}
-            {
-                name === 'All'
-                ?
-                <span className="CategoryLength">{universe.length}</span>
-                :
-                <span className="CategoryLength">{currentLength}</span>
-            }
-        </li>
-    )
+    console.log(currentTitle)
+
+    if(name === currentTitle) {
+        return (
+            <li onClick={selectedCategory} className='SelectTitle'>
+                {name}
+                {
+                    name === 'All'
+                    ?
+                    <span className="CategoryLength">{universe.length}</span>
+                    :
+                    <span className="CategoryLength">{currentLength}</span>
+                }
+            </li>
+        )
+    }
+    else {
+        return (
+            <li onClick={selectedCategory}>
+                {name}
+                {
+                    name === 'All'
+                    ?
+                    <span className="CategoryLength">{universe.length}</span>
+                    :
+                    <span className="CategoryLength">{currentLength}</span>
+                }
+            </li>
+        )
+    }
 })

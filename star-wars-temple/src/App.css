@@ -30,6 +30,7 @@ li {
 }
 
 
+
 .Header {
   width: 100%;
   height: auto;
@@ -94,6 +95,22 @@ li {
   width: 20%;
 }
 
+
+.Container .DataBank .FilterDataBank  .SelectTitle {
+  color: white;
+  font-weight: 500;
+  animation: colorChanged 0.5s linear;
+}
+
+@keyframes colorChanged {
+  from {
+    color: #B5B7B7;
+  }
+  to {
+    color: white;
+  }
+}
+
 .Container .DataBank .FilterDataBank ul {
   width: 20%;
   height: 400px;
@@ -109,6 +126,11 @@ li {
   font-weight: 500;
   cursor: pointer;
   width: 100%;
+}
+
+.Container .DataBank .FilterDataBank ul li:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
 }
 
 .Container .DataBank .FilterDataBank ul li span {
