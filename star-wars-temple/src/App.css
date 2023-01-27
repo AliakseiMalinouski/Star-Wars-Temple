@@ -5,8 +5,8 @@
 }
 
 html {
-  width: 100%;
-  
+  min-width: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -29,10 +29,6 @@ li {
   list-style: none;
 }
 
-
-/* #root {
-  background-color: red;
-} */
 
 .Header {
   width: 100%;
