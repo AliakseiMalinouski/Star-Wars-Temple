@@ -1,7 +1,7 @@
 import { getUniverse } from "./universeSlice";
 
 export const universeThunk = (dispatch) => {
-    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/e0ffbb361d15adcd7382e9c1df796608/raw/d53b464394322ae3234a18a7f2448d3e7b56b747/UniverseStarWars",
+    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/e0ffbb361d15adcd7382e9c1df796608/raw/1d738fccf7af608198fc17c47ca82aefef7efdc9/UniverseStarWars",
         {
             method: 'get'
         }

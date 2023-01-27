@@ -5,8 +5,6 @@ import { HistoryOfHero } from "./HistoryOfHero";
 
 export const AboutHero = React.memo(({currentHero})=> {
     
-    console.log(currentHero)
-
     return (
             <>
                     <div className="BrieflyAboutHero">

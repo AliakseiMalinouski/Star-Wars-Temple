@@ -162,7 +162,7 @@ li {
   width: 100%;
   text-align: center;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .Container .DataBank .Characters .Hero .CardBorder{
@@ -397,4 +397,27 @@ li {
 
 .Container .HistoryOfHero .Part img {
   width: 100%;
+}
+
+.Streaming {
+  width: 100%;
+}
+
+.Streaming .Banner {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a0b0b;
+}
+
+.Streaming .Banner a {
+  color: #B5B7B7;
+  font-weight: 500;
+}
+
+.Streaming .Banner a:hover {
+  transition: 0.5s;
+  color: white;
 }

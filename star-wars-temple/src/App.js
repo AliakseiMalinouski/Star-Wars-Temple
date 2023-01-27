@@ -5,6 +5,7 @@ import { store } from './Redux/store';
 import { PageRouter } from './Router/PageRouter';
 import './App.css';
 import { Header } from './components/Header';
+import { StreamingBanner } from './components/StreamingBanner';
 
 function App() {
   return (
@@ -13,8 +14,13 @@ function App() {
         <div className='Header'>
           <div className='Container'>
             <Header/>
-          </div>  
+          </div>
         </div>
+        <div className='Streaming'>
+            <div className='Container'>
+                <StreamingBanner/>
+            </div>
+          </div>  
         <div className='Container'>
           <PageRouter/>
         </div>
