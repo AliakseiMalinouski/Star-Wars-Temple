@@ -21,8 +21,10 @@ function App() {
                 <StreamingBanner/>
             </div>
           </div>  
-        <div className='Container'>
-          <PageRouter/>
+        <div className='Content'>
+          <div className='Container'>
+            <PageRouter/>
+          </div>
         </div>
       </Provider>
     </BrowserRouter>

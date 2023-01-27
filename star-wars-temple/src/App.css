@@ -29,7 +29,9 @@ li {
   list-style: none;
 }
 
-
+#root {
+  min-height: 100vh;
+}
 
 .Header {
   width: 100%;
@@ -37,13 +39,22 @@ li {
   background-color: black;
 }
 
+
 .Container {
   width: 1600px;
   margin: 0 auto;
   background-color: black;
   padding-left: 50px;
   padding-right: 50px;
-  height: 100%;
+}
+
+.Content .Container {
+  width: 1600px;
+  margin: 0 auto;
+  background-color: black;
+  padding-left: 50px;
+  padding-right: 50px;
+  min-height: 100vh;
 }
 
 .Header .Container .Logo {
