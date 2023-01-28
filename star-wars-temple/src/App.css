@@ -458,5 +458,52 @@ li {
 
 .Films {
   padding-top: 100px;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
+.Films .Film {
+  height: 700px;
+  width: 25%;
+  background-color: #202124;
+  color: white;
+  margin-bottom: 30px;
+  border-radius: 13px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 20px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.Films .Film:hover {
+  transition: 0.5s;
+  transform: scale(1.011);
+  opacity: 0.9;
+}
+
+
+.Films .Film h4 {
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.Films .Film .InformationFilms {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-top: 20px;
+  border-radius: 13px;
+}
+
+.Films .Film .InformationFilms p {
+  margin-bottom: 7px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+

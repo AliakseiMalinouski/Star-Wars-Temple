@@ -26,6 +26,7 @@ export const Films = () => {
         numberDisc={e.number_discs}
         viewing={e.viewing_format_name}
         ratio={e.aspect_ratio_name}
+        image={e.image}
     />), [skywalkerSagaFilms])
 
     return (
