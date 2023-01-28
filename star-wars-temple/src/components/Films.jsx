@@ -1,21 +1,40 @@
 import React from "react"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { skywalkerSagaThunk } from "../Redux/skywalkerSagaThunk";
 import { useSelector, useDispatch } from "react-redux";
 import { useMemo } from "react";
 import { FilmSkywalkerSaga } from "./FilmSkywalkerSaga";
+import { FilterFilms } from "./FilterFilms";
+import { categoriesFilmThunk } from "../Redux/categoriesFilmsThunk";
+import { starWarsEvents } from "../events";
 
 export const Films = () => {
 
     let dispatch = useDispatch();
 
     const skywalkerSagaFilms = useSelector(state => state.skywalkerSaga.films);
+    const categoriesFilms = useSelector(state => state.filterFilm.categories);
+
+    const [currentTitle, setCurrentTitle] = useState("All");
 
     useEffect(() => {   
         dispatch(skywalkerSagaThunk);
     }, [dispatch]);
 
-    let filmsMemoizeed = useMemo(() => skywalkerSagaFilms.map(e => <FilmSkywalkerSaga 
+    useEffect(() => {
+        dispatch(categoriesFilmThunk);
+    }, [dispatch]);
+
+    useEffect(() => {
+        starWarsEvents.addListener("SelectCategory", changeCategory);
+        return () => {
+            starWarsEvents.removeListener("SelectCategory", changeCategory);
+        }
+    }, []);
+
+    let filmsMemoizeed = useMemo(() => (currentTitle === 'All')
+    ?
+    skywalkerSagaFilms.map(e => <FilmSkywalkerSaga 
         key={e.movie_id}
         title={e.title}
         genre={e.category_name}
@@ -27,11 +46,37 @@ export const Films = () => {
         viewing={e.viewing_format_name}
         ratio={e.aspect_ratio_name}
         image={e.image}
-    />), [skywalkerSagaFilms])
+    />)
+    :
+    skywalkerSagaFilms.filter(elem => {
+        return elem.type === currentTitle.toLowerCase();
+    }).map(e => <FilmSkywalkerSaga 
+        key={e.movie_id}
+        title={e.title}
+        genre={e.category_name}
+        year={e.release_year}
+        time={e.running_time}
+        rating={e.rating_name}
+        disc={e.disc_format_name}
+        numberDisc={e.number_discs}
+        viewing={e.viewing_format_name}
+        ratio={e.aspect_ratio_name}
+        image={e.image}
+    />), [skywalkerSagaFilms, currentTitle])
+    
+    let categoriesMemoizeed = useMemo(() => categoriesFilms.map(e => <FilterFilms key={e.code} title={e.category} selectedCategory={currentTitle}/>) , [categoriesFilms, currentTitle])
+
+    const changeCategory = (title) => {
+        setCurrentTitle(title);
+    }
 
     return (
-        <div className="Films">
-            {filmsMemoizeed}
-        </div>
+        <>
+            <h3 className="FilteringByFilm">Filtering by film</h3>
+            <ul className="FilterFilms">{categoriesMemoizeed}</ul>
+            <div className="Films" style={{justifyContent: filmsMemoizeed.length <= 2 ? "space-around" : "space-evenly"}}>
+                {filmsMemoizeed}
+            </div>
+        </>
     )
 }

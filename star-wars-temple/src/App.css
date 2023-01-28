@@ -506,4 +506,32 @@ li {
   text-align: center;
 }
 
+.FilterFilms {
+  padding-top: 30px;
+}
 
+.FilterFilms li{
+  font-size: 18px;
+  color: #B5B7B7;
+  text-transform: uppercase;
+  line-height: 35px;
+}
+
+.FilterFilms li:hover {
+  transition: 0.5s;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+}
+
+.FilteringByFilm {
+  padding-top: 100px;
+  color: white;
+  font-size: 28px;
+}
+
+
+.FilterFilms .SelectedCategory {
+  color: white;
+  font-weight: 500;
+}
