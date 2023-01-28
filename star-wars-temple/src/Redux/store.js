@@ -4,7 +4,7 @@ import navlinksSlice from './navlinksSlice';
 import titlesSlice from './titlesSlice';
 import currentHeroSlice from './currentHeroSlice';
 import universeSlice from './universeSlice';
-
+import skywalkerSagaSlice from './skywalkerSagaSlice';
 
 export const store = configureStore({
     reducer: {
@@ -12,5 +12,6 @@ export const store = configureStore({
         titles: titlesSlice,
         universe: universeSlice,
         currentHero: currentHeroSlice,
+        skywalkerSaga: skywalkerSagaSlice,
     }
 });
