@@ -3,6 +3,7 @@ import React from 'react';
 import { PageDataBank } from '../Pages/PageDataBank';
 import { PageHeroDetails } from '../Pages/PageHeroDetails';
 import {PageFilms} from '../Pages/PageFilms';
+import {PageFilmsDetails} from '../Pages/PageFilmsDetails';
 
 export const PageRouter = () => {
     return (
@@ -10,6 +11,7 @@ export const PageRouter = () => {
             <Route path='/' element={<PageDataBank/>}/>
             <Route path='herodetails/:heroname' element={<PageHeroDetails/>} />
             <Route path='/films' element={<PageFilms/>}/>
+            <Route path='/detailsfilm/:filmname' element={<PageFilmsDetails/>}/>
         </Routes>
     )
 }
