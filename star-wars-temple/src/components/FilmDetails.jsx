@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { skywalkerSagaThunk } from "../Redux/skywalkerSagaThunk";
 
-export const FilmDetails = () => {
+export const FilmDetails = React.memo(() => {
 
     const skywalkerSagaFilms = useSelector(state => state.skywalkerSaga.films);
+
+    const [currentFilm, setCurrentFilm] = useState({})
 
     let params = useParams();
 
@@ -17,12 +19,14 @@ export const FilmDetails = () => {
     useEffect(() => {
         if(!skywalkerSagaFilms.length) dispatch(skywalkerSagaThunk);
         let neededFilm = skywalkerSagaFilms.find(elem => elem.title === filmName);
-        console.log(neededFilm)
-    })
+        setCurrentFilm(neededFilm);
+    }, [skywalkerSagaFilms, setCurrentFilm, dispatch, filmName])
+
+    console.log(currentFilm)
 
     return (
         <div style={{color: 'white'}}>
             some info about {filmName}
         </div>
     )
-}
+})
