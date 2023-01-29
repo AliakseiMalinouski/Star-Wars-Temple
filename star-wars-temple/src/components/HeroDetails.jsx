@@ -20,8 +20,11 @@ export const HeroDetails = React.memo(() => {
     const currentHero = useSelector(state => state.currentHero.currentHero);
     const favouriteCharaters = useSelector(state => state.favourite.favouriteCharacters);
 
+    useEffect(() => {
+        localStorage.setItem("favouriteChacarters", JSON.stringify(favouriteCharaters));
+    }, [favouriteCharaters]);
+
     const addToFavouriteCharacters = useCallback((hero) => {
-        console.log(hero)
         let isIn = false;
         favouriteCharaters.forEach(elem => {
             if(hero.code === elem.code) isIn = true;
