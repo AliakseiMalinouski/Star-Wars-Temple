@@ -1,7 +1,7 @@
 import { getLinks } from "./navlinksSlice";
 
 export const navLinksThunk = (dispatch) => {
-    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/9b35108ab7f40fb59650bb9c4c3c313c/raw/24651f1aa607a5490656c95115c918877206bd42/NavLinksStarWars",
+    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/9b35108ab7f40fb59650bb9c4c3c313c/raw/fd4985e8744d8fd771592666d5e155b8cf4b3225/NavLinksStarWars",
         {
             method: 'get',
         }

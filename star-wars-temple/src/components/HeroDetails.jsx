@@ -1,11 +1,13 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import {useParams} from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import { updateHero } from "../Redux/currentHeroSlice";
 import { universeThunk } from "../Redux/universeThunk";
 import { AboutHero } from "./AboutHero";
 import { Loading } from "./Loading";
+import { starWarsEvents } from "../events";
+import { setHero } from "../Redux/favouriteSlice";
 
 export const HeroDetails = React.memo(() => {
 
@@ -16,6 +18,23 @@ export const HeroDetails = React.memo(() => {
 
     const universe = useSelector(state => state.universe.universe);
     const currentHero = useSelector(state => state.currentHero.currentHero);
+    const favouriteCharaters = useSelector(state => state.favourite.favouriteCharacters);
+
+    const addToFavouriteCharacters = useCallback((hero) => {
+        console.log(hero)
+        let isIn = false;
+        favouriteCharaters.forEach(elem => {
+            if(hero.code === elem.code) isIn = true;
+        });
+        if(!isIn) dispatch(setHero(hero));
+    }, [favouriteCharaters, dispatch]);
+
+    useEffect(() => {
+        starWarsEvents.addListener("AddToFavourite", addToFavouriteCharacters);
+        return () => {
+            starWarsEvents.removeListener("AddToFavourite", addToFavouriteCharacters);
+        }
+    }, [addToFavouriteCharacters])
 
     useEffect(() => {
         if(!universe.length) dispatch(universeThunk);
@@ -25,7 +44,7 @@ export const HeroDetails = React.memo(() => {
         dispatch(updateHero(findedHero));
     }, [universe, heroName, dispatch, currentHero]);
 
-    console.log(currentHero)
+
 
     return (
         <div className="HeroDetails">

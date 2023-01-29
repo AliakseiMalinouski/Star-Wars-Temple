@@ -2,8 +2,13 @@ import React from "react";
 import { AppearancesHero } from "./AppearancesHero";
 import { AffiliationsHero } from "./AffiliationsHero";
 import { HistoryOfHero } from "./HistoryOfHero";
+import { starWarsEvents } from "../events";
 
 export const AboutHero = React.memo(({currentHero})=> {
+
+    const addToFavourite = () => {
+        starWarsEvents.emit('AddToFavourite', currentHero)
+    }
     
     return (
             <>
@@ -18,6 +23,7 @@ export const AboutHero = React.memo(({currentHero})=> {
                     <div className="Description">
                         <h2>{currentHero.name}</h2>
                         <p>{currentHero.description}</p>
+                        <img onClick={addToFavourite} src="https://cdn-icons-png.flaticon.com/512/420/420048.png" alt="Heart" className="AddToFavButton"/>
                     </div>
                 </div>
                 <div className="MoreAboutTheCharacter">
