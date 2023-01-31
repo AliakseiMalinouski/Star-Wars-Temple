@@ -1,9 +1,12 @@
 import React from "react";
 import { useMemo, useEffect, useState } from "react";
 import { FavouriteCharacter } from "./FavouriteCharacter";
+import {removeHero} from '../Redux/favouriteSlice';
+import { useDispatch } from "react-redux";
 
 export const FavouriteCharacters = () => {
 
+    let dispatch = useDispatch();
 
     const [favouriteCharactersInLocalStorage, setFavouriteCharactersInLocalStorage] = useState([]);
 
@@ -21,6 +24,7 @@ export const FavouriteCharacters = () => {
     const clearLocalStorageFavourite = () => {
         localStorage.removeItem("favouriteChacarters");
         setFavouriteCharactersInLocalStorage([]);
+        dispatch(removeHero());
     }
 
     return (

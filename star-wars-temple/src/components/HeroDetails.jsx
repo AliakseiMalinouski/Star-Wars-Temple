@@ -8,6 +8,7 @@ import { AboutHero } from "./AboutHero";
 import { Loading } from "./Loading";
 import { starWarsEvents } from "../events";
 import { setHero } from "../Redux/favouriteSlice";
+import { configureState } from "../Redux/favouriteSlice";
 
 export const HeroDetails = React.memo(() => {
 
@@ -21,8 +22,12 @@ export const HeroDetails = React.memo(() => {
     const favouriteCharaters = useSelector(state => state.favourite.favouriteCharacters);
 
     useEffect(() => {
+        const data = localStorage.getItem("favouriteChacarters") ? JSON.parse(localStorage.getItem("favouriteChacarters")) : []
+        if(favouriteCharaters.length === 0 && data.length) {
+            dispatch(configureState(data));
+        }
         localStorage.setItem("favouriteChacarters", JSON.stringify(favouriteCharaters));
-    }, [favouriteCharaters]);
+    }, [favouriteCharaters, dispatch]);
 
     const addToFavouriteCharacters = useCallback((hero) => {
         let isIn = false;
