@@ -170,6 +170,7 @@ li {
   height: 100%;
   display: flex;
   justify-content: space-evenly;
+  flex-flow: wrap;
 }
 
 .Container .DataBank .Characters .Hero {
