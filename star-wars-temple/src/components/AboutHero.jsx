@@ -1,14 +1,30 @@
 import React from "react";
+import { useEffect, useState, useCallback } from "react";
 import { AppearancesHero } from "./AppearancesHero";
 import { AffiliationsHero } from "./AffiliationsHero";
 import { HistoryOfHero } from "./HistoryOfHero";
 import { starWarsEvents } from "../events";
+import { useSelector } from "react-redux";
 
 export const AboutHero = React.memo(({currentHero})=> {
+
+    const favouriteCharaters = useSelector(state => state.favourite.favouriteCharacters);
+
+    const checkIsInLocalStorage = useCallback(() => {
+        favouriteCharaters.forEach(elem => currentHero.code === elem.code ? setImageFavouriteState(true) : setImageFavouriteState(false));
+    }, [favouriteCharaters, currentHero]);
+
+    useEffect(() => {
+        checkIsInLocalStorage();
+    }, [checkIsInLocalStorage])
+
+    const [imageFavouriteState, setImageFavouriteState] = useState(false);
 
     const addToFavourite = () => {
         starWarsEvents.emit('AddToFavourite', currentHero)
     }
+
+    
     
     return (
             <>
@@ -23,7 +39,13 @@ export const AboutHero = React.memo(({currentHero})=> {
                     <div className="Description">
                         <h2>{currentHero.name}</h2>
                         <p>{currentHero.description}</p>
-                        <img onClick={addToFavourite} src="https://cdn-icons-png.flaticon.com/512/420/420048.png" alt="Heart" className="AddToFavButton"/>
+                        {
+                            !imageFavouriteState
+                            ?
+                            <img onClick={addToFavourite} src="https://img.icons8.com/ios/256/star.png" alt="Heart" className="AddToFavButton"/>
+                            :
+                            <img className="AddedInFavourite" src="https://img.icons8.com/emoji/256/star-emoji.png" alt="Heart"/>
+                        }
                     </div>
                 </div>
                 <div className="MoreAboutTheCharacter">
