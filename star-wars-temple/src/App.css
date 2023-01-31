@@ -166,7 +166,7 @@ li {
 }
 
 .Container .DataBank .Characters {
-  width: 60%;
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -174,7 +174,7 @@ li {
 
 .Container .DataBank .Characters .Hero {
   width: 162px;
-  height: 237px;
+  height: 266px;
   color: white;
   border-radius: 13px;
   background-color: #202124;
@@ -588,7 +588,7 @@ li {
 .FavouriteCharacters .FavouriteHero {
   color: white;
   width: 15%;
-  height: 350px;
+  height: 378px;
   background-color: #202124;
   border-radius: 13px;
 }
