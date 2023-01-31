@@ -548,5 +548,15 @@ li {
 }
 
 .FavouriteCharacters {
+  width: 100%;
+}
+
+.FavouriteCharacters .HeroesCategory {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.FavouriteCharacters .FavouriteHero {
   color: white;
 }

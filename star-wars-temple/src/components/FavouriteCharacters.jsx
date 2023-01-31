@@ -9,11 +9,13 @@ export const FavouriteCharacters = () => {
     let dispatch = useDispatch();
 
     const [favouriteCharactersInLocalStorage, setFavouriteCharactersInLocalStorage] = useState([]);
+    const [currentFlex, setCurrentFlex] = useState(false);
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem("favouriteChacarters"));
+        const data = localStorage.getItem("favouriteChacarters") ? JSON.parse(localStorage.getItem("favouriteChacarters")) : [];
         setFavouriteCharactersInLocalStorage(data);
-    }, []);
+        data.length < 3 ? setCurrentFlex(true) : setCurrentFlex(false);
+    }, [setCurrentFlex]);
 
     let favouriteCharactersMemoizeed = useMemo(() => favouriteCharactersInLocalStorage === [] || favouriteCharactersInLocalStorage === null || favouriteCharactersInLocalStorage === undefined 
     ?
@@ -33,7 +35,9 @@ export const FavouriteCharacters = () => {
                 ?
                 <div>favourite is empty</div>
                 :
-                favouriteCharactersMemoizeed
+                <div className="HeroesCategory" style={{justifyContent: currentFlex ? 'flex-start' : 'space-evenly'}}>
+                    {favouriteCharactersMemoizeed}
+                </div>
             }
             <button type="button" onClick={clearLocalStorageFavourite}>Clear Favourite</button>
         </div>
