@@ -14,6 +14,12 @@ export const AboutHero = React.memo(({currentHero})=> {
         favouriteCharaters.forEach(elem => currentHero.code === elem.code ? setImageFavouriteState(true) : setImageFavouriteState(false));
     }, [favouriteCharaters, currentHero]);
 
+    const [typeHero, setTypeHero] = useState(false);
+
+    useEffect(() => {
+        currentHero.type === 'locations' ? setTypeHero(true) : setTypeHero(false);
+    }, [currentHero, setTypeHero]);
+
     useEffect(() => {
         checkIsInLocalStorage();
     }, [checkIsInLocalStorage])
@@ -24,7 +30,6 @@ export const AboutHero = React.memo(({currentHero})=> {
         starWarsEvents.emit('AddToFavourite', currentHero)
     }
 
-    
     
     return (
             <>
@@ -40,11 +45,17 @@ export const AboutHero = React.memo(({currentHero})=> {
                         <h2>{currentHero.name}</h2>
                         <p>{currentHero.description}</p>
                         {
-                            !imageFavouriteState
+                            typeHero 
                             ?
-                            <img onClick={addToFavourite} src="https://img.icons8.com/ios/256/star.png" alt="Heart" className="AddToFavButton"/>
+                            null
                             :
-                            <img className="AddedInFavourite" src="https://img.icons8.com/emoji/256/star-emoji.png" alt="Heart"/>
+                            
+                                !imageFavouriteState
+                                ?
+                                <img onClick={addToFavourite} src="https://img.icons8.com/ios/256/star.png" alt="Heart" className="AddToFavButton"/>
+                                :
+                                <img className="AddedInFavourite" src="https://img.icons8.com/emoji/256/star-emoji.png" alt="Heart"/>
+                            
                         }
                     </div>
                 </div>
