@@ -19,7 +19,7 @@ export const FavouriteCharacters = () => {
     ?
     null
     :
-    favouriteCharactersInLocalStorage.map(e => <FavouriteCharacter key={e.code} name={e.name}/>), [favouriteCharactersInLocalStorage]);
+    favouriteCharactersInLocalStorage.map(e => <FavouriteCharacter key={e.code} name={e.name} clan={e.clan} image={e.image}/>), [favouriteCharactersInLocalStorage]);
 
     const clearLocalStorageFavourite = () => {
         localStorage.removeItem("favouriteChacarters");

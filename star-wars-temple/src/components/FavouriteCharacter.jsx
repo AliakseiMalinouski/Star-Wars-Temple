@@ -1,9 +1,10 @@
 import React from "react";
 
-export const FavouriteCharacter = ({name}) => {
+export const FavouriteCharacter = ({name, clan, image}) => {
     return (
-        <div>
+        <div className="FavouriteHero">
             {name}
+            {clan}
         </div>
     )
 }
