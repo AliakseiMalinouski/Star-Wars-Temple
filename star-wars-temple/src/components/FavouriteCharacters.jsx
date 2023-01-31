@@ -34,7 +34,7 @@ export const FavouriteCharacters = () => {
         let lengthArray = [];
         let sith = favouriteCharactersInLocalStorage.filter(hero => hero.clan === 'Sith');
         let bountyHunter = favouriteCharactersInLocalStorage.filter(hero => hero.clan === 'Bounty Hunter');
-        let droids = favouriteCharactersInLocalStorage.filter(hero => hero.clan === 'Droids');
+        let droids = favouriteCharactersInLocalStorage.filter(hero => hero.clan === 'Confederation of Separatists');
         let clansArray = [sith, bountyHunter, droids];
         lengthArray.push(sith.length, bountyHunter.length, droids.length);
         let maxLengthOfClan = Math.max.apply(null, lengthArray);
@@ -43,9 +43,7 @@ export const FavouriteCharacters = () => {
         });
         let finallyCategory = "";
         resultClan.forEach(elem => {
-            if(elem.clan === 'Sith') finallyCategory = 'Sith';
-            else if(elem.clan === 'Droids') finallyCategory = 'Droids';
-            else if(elem.clan === 'Bounty Hunter') finallyCategory = 'Bounty Hunter';
+            finallyCategory = elem.clan;
         });
         setFinallyCategory(finallyCategory);
     }
