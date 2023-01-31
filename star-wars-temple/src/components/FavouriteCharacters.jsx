@@ -39,7 +39,13 @@ export const FavouriteCharacters = () => {
                     {favouriteCharactersMemoizeed}
                 </div>
             }
-            <button type="button" onClick={clearLocalStorageFavourite}>Clear Favourite</button>
+            {
+                !favouriteCharactersInLocalStorage.length 
+                ?
+                null
+                :
+                <button type="button" onClick={clearLocalStorageFavourite}>Clear Favourite</button>
+            }
         </div>
     )
 }

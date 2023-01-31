@@ -581,9 +581,39 @@ li {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  padding-bottom: 100px;
+
 }
 
 .FavouriteCharacters .FavouriteHero {
   color: white;
+  width: 15%;
+  height: 350px;
+  background-color: #202124;
+  border-radius: 13px;
+}
+
+.FavouriteCharacters .FavouriteHero img {
+  width: 100%;
+  border-radius: 13px;
+}
+
+.FavouriteCharacters .FavouriteHero .RestOfInfoFavHero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.FavouriteCharacters .FavouriteHero .RestOfInfoFavHero h3 {
+  font-size: 22px;
+  text-align: center;
+}
+
+.FavouriteCharacters .FavouriteHero .RestOfInfoFavHero p {
+  margin-top: 13px;
+  font-weight: 500;
+  text-align: center;
 }
 
