@@ -3,15 +3,21 @@ import { useEffect, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {seriesThunk} from '../Redux/seriesThunk';
 import { Serial } from "./Serial";
+import { postersThunk } from "../Redux/postersThunk";
 
-export const Series = () => {
+export const Series = React.memo(() => {
 
     let dispatch = useDispatch();
 
     const series = useSelector(state => state.series.series);
+    const posters = useSelector(state => state.posters.posters);
 
     useEffect(() => {
         dispatch(seriesThunk)
+    }, [dispatch]);
+
+    useEffect(() => {
+        dispatch(postersThunk)
     }, [dispatch]);
 
     let seriesMemoizeed = useMemo(() => series.map(e => <Serial 
@@ -29,10 +35,14 @@ export const Series = () => {
 
     />), [series]);
         
+    console.log(posters)
 
     return (
-        <div className='Series'>
-            {seriesMemoizeed}
-        </div>
+        <>
+            <div className='Series'>
+                {seriesMemoizeed}
+            </div>
+
+        </>
     )
-}
+})

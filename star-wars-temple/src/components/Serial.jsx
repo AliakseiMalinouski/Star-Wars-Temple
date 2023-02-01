@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 
-export const Serial = ({name, image}) => {
+export const Serial = React.memo(({name, image}) => {
 
     let navigate = useNavigate();
 
@@ -19,4 +19,4 @@ export const Serial = ({name, image}) => {
             </div>
         </div>
     )
-}
+})

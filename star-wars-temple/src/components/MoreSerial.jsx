@@ -1,6 +1,6 @@
 import React from "react";
 
-export const MoreSerial = ({name, image, genre, platform, studio, creater, year, pg, description}) => {
+export const MoreSerial = React.memo(({name, image, genre, platform, studio, creater, year, pg, description}) => {
     return (
         <div className="MoreSpecial">
             <h2>{name}</h2>
@@ -20,4 +20,4 @@ export const MoreSerial = ({name, image, genre, platform, studio, creater, year,
             </div>
         </div>
     )
-}
+})

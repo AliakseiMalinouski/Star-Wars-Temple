@@ -4,7 +4,7 @@ import { useEffect, useState, useMemo } from "react";
 import { useSelector } from "react-redux";
 import { MoreSerial } from "./MoreSerial";
 
-export const SerialDetails = () => {
+export const SerialDetails = React.memo(() => {
 
     let params = useParams();
 
@@ -39,4 +39,4 @@ export const SerialDetails = () => {
             {currentSeriesMemoizeed}
         </>
     )
-}
+})
