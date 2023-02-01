@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {seriesThunk} from '../Redux/seriesThunk';
 import { Serial } from "./Serial";
 import { postersThunk } from "../Redux/postersThunk";
+import { Poster } from "./Poster";
 
 export const Series = React.memo(() => {
 
@@ -35,14 +36,16 @@ export const Series = React.memo(() => {
 
     />), [series]);
         
-    console.log(posters)
+    let postersMemoizeed = useMemo(() => posters.map(e => <Poster key={e.code} name={e.name} image={e.image} logo={e.logo} text={e.text} disney={e.disney} youtube={e.youtube}/>), [posters])
 
     return (
         <>
             <div className='Series'>
                 {seriesMemoizeed}
             </div>
-
+            <div className="Posters">
+                {postersMemoizeed}
+            </div>
         </>
     )
 })

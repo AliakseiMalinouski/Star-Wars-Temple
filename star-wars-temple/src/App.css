@@ -704,3 +704,79 @@ li {
 .MoreSpecial .OtherInfoAboutSeries p span {
   font-weight: 500;
 }
+
+.Posters {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.Posters .Poster {
+  width: 100%;
+  color: white;
+  height: 600px;
+  margin-bottom: 60px;
+  border-radius: 13px;
+  position: relative;
+  display: flex;
+}
+
+.Posters .Poster .LogoPoster {
+  width: 443px;
+  height: 138px;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+
+.Posters .Poster .PosterText {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 140px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 45px;
+  flex-direction: column;
+}
+
+.Posters .Poster .PosterText .ButtonsPoster {
+  padding-top: 40px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Posters .Poster .PosterText .ButtonsPoster a {
+  color: white;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+}
+
+.Posters .Poster .PosterText .ButtonsPoster a:hover {
+  transition: 0.5s;
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.Posters .Poster .PosterText .ButtonsPoster a:nth-child(1) {
+  background-color: #106AE0;
+  width: 210px;
+  height: 48px;
+  border-radius: 13px;
+  color: white;
+}
+
+.Posters .Poster .PosterText .ButtonsPoster a:nth-child(2) {
+  background-color: black;
+  width: 210px;
+  height: 48px;
+  border-radius: 13px;
+  color: white;
+}
