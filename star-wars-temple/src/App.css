@@ -618,3 +618,43 @@ li {
   text-align: center;
 }
 
+.Series {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  padding-top: 100px;
+}
+
+.Series .Serial {
+  color: white;
+  width: 15%;
+  background-color: #202124;
+  border-radius: 13px;
+  height: 390px;
+  cursor: pointer;
+}
+
+.Series .Serial:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.Series .Serial img {
+  width: 100%;
+  height: 310px;
+  border-radius: 13px;
+}
+
+.Series .Serial .InfoAboutSeries {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.Series .Serial .InfoAboutSeries h3 {
+  font-size: 18px;
+}

@@ -7,6 +7,7 @@ import universeSlice from './universeSlice';
 import skywalkerSagaSlice from './skywalkerSagaSlice';
 import FilterFilmSlice from './FilterFilmSlice';
 import favouriteSlice from './favouriteSlice';
+import seriesSlice from './seriesSlice';
 
 export const store = configureStore({
     reducer: {
@@ -17,5 +18,6 @@ export const store = configureStore({
         skywalkerSaga: skywalkerSagaSlice,
         filterFilm: FilterFilmSlice,
         favourite: favouriteSlice,
+        series: seriesSlice,
     }
 });

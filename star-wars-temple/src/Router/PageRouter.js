@@ -5,6 +5,8 @@ import { PageHeroDetails } from '../Pages/PageHeroDetails';
 import {PageFilms} from '../Pages/PageFilms';
 import {PageFilmsDetails} from '../Pages/PageFilmsDetails';
 import { PageFavourite } from '../Pages/PageFavourite';
+import { PageSeries } from '../Pages/PageSeries';
+import { PageDetailsSerial } from '../Pages/PageDetailsSerial';
 
 export const PageRouter = () => {
     return (
@@ -14,6 +16,8 @@ export const PageRouter = () => {
             <Route path='/films' element={<PageFilms/>}/>
             <Route path='/detailsfilm/:filmname' element={<PageFilmsDetails/>}/>
             <Route path='/favouritecharacters' element={<PageFavourite/>}/>
+            <Route path='/series' element={<PageSeries/>}/>
+            <Route path='/seriesdetails/:seriesname' element={<PageDetailsSerial/>}/>
         </Routes>
     )
 }
