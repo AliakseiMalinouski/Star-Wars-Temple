@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useSelector } from "react-redux";
+import { MoreSerial } from "./MoreSerial";
 
 export const SerialDetails = () => {
 
@@ -20,11 +21,22 @@ export const SerialDetails = () => {
         setCurrentSeries(neededSeries);
     }, [series, seriesName]);
 
-    console.log(currentSeries)
+    let currentSeriesMemoizeed = useMemo(() => <MoreSerial 
+    key={currentSeries.code}
+    name={currentSeries.name}
+    genre={currentSeries.genre}
+    platform={currentSeries.platform}
+    studio={currentSeries.studio}
+    creater={currentSeries.creater}
+    image={currentSeries.image}
+    year={currentSeries.year}
+    pg={currentSeries.pg}
+    description={currentSeries.description}
+    />, [currentSeries])
 
     return (
-        <div style={{color: 'white'}}>
-            some info about {seriesName}
-        </div>
+        <>
+            {currentSeriesMemoizeed}
+        </>
     )
 }
