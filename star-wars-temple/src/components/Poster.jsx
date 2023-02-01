@@ -23,8 +23,8 @@ export const Poster = React.memo(({image, logo, name, disney, youtube, text}) =>
             <div className="PosterText">
                 <p>{text}</p>
                 <div className="ButtonsPoster">
-                    <a href={disney}>STREAM NOW</a>
-                    <a href={youtube}>WATCH TRAILER</a>
+                    <a href={disney} rel="noreferrer" target="_blank">STREAM NOW</a>
+                    <a href={youtube} rel="noreferrer" target="_blank">WATCH TRAILER</a>
                 </div>
             </div>
         </div>
