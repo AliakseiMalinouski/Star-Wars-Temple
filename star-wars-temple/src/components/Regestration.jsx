@@ -37,16 +37,24 @@ export const Regestration = () => {
         setRegPass(EO.target.value);
     }
 
-    return (
-        <div className="Authentication">
-            <div className="RegPart">
-                <input type='text' placeholder='email' value={regEmail} onChange={regestrationEmailHandle}/>
-                <input type='text' placeholder='password' value={regPass} onChange={regestrationPasswordHandle}/>
-                <button onClick={createUser}>Create user</button>
+    if(currentUser === "" || currentUser === undefined || currentUser === null) {
+        return (
+            <div className="Authentication">
+                <div className="RegPart">
+                    <input type='text' placeholder='email' value={regEmail} onChange={regestrationEmailHandle}/>
+                    <input type='text' placeholder='password' value={regPass} onChange={regestrationPasswordHandle}/>
+                    <button onClick={createUser}>Create user</button>
+                </div>
+                <NavLink style={{color: 'white'}} to='/login'>Sign In</NavLink>
             </div>
-            <h3 style={{color: 'white'}}>user logged in as {currentUser}</h3>
-            <button onClick={signOutUser}>Sign Out</button>
-            <NavLink style={{color: 'white'}} to='/login'>Sign In</NavLink>
-        </div>
-    )
+        )
+    }
+    else {
+        return (
+            <div>
+                <h3 style={{color: 'white'}}>user logged in as {currentUser}</h3>
+                <button onClick={signOutUser}>Sign Out</button>
+            </div>
+        )
+    }
 }

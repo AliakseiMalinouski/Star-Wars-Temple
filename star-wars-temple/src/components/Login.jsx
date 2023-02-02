@@ -36,13 +36,23 @@ export const Login = () => {
         signOut(auth);
     }
 
-    return (
-        <div className="Login">
-            <input type='text' placeholder='email' value={loginEmail} onChange={loginEmailHandle}/>
-            <input type='text' placeholder='password' value={loginPass} onChange={loginPasswordHandle}/>
-            <button onClick={loginUser}>Sign In</button>
-            <h3 style={{color: 'white'}}>user logged in as {currentUser}</h3>
-            <button onClick={signOutUser}>Sign Out</button>
-        </div>
-    )
+    console.log(currentUser)
+
+    if(currentUser === "" || currentUser === undefined || currentUser === null) {
+        return (
+            <div className="Login">
+                <input type='text' placeholder='email' value={loginEmail} onChange={loginEmailHandle}/>
+                <input type='text' placeholder='password' value={loginPass} onChange={loginPasswordHandle}/>
+                <button onClick={loginUser}>Sign In</button>
+            </div>
+        )
+    }
+    else {
+        return (
+            <div>
+                <h3 style={{color: 'white'}}>user logged in as {currentUser}</h3>
+                <button onClick={signOutUser}>Sign Out</button>
+            </div>
+        )
+    }
 }
