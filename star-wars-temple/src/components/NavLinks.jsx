@@ -5,13 +5,15 @@ import { useEffect, useCallback } from 'react';
 
 export const NavLinks = ({name, url, namePage}) => {
 
+    console.log(name, namePage)
+
     const changeLocation = useCallback(() => {
         starWarsEvents.emit("changeLocation", name);
     }, [name])
 
     useEffect(() => {
-        changeLocation();
-    }, [changeLocation])
+        if(name === 'DataBank') changeLocation();
+    }, [changeLocation, name])
 
     if(name === namePage) {
         return (
