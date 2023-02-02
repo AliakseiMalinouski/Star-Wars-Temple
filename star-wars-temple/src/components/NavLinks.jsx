@@ -1,21 +1,24 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import { starWarsEvents } from '../events';
 
 export const NavLinks = ({name, url, namePage}) => {
 
-    console.log(name.toLowerCase(), namePage.toLowerCase())
+    const changeLocation = () => {
+        starWarsEvents.emit("changeLocation", name);
+    }
 
-    if(name.toLowerCase() === namePage) {
+    if(name === namePage) {
         return (
             <>
-                <NavLink style={{color: 'red'}} to={url}>{name}</NavLink>
+                <NavLink style={{color: 'red'}} onClick={changeLocation} to={url}>{name}</NavLink>
             </>
         )
     }
     else {
         return (
             <>
-                <NavLink to={url}>{name}</NavLink>
+                <NavLink onClick={changeLocation} to={url}>{name}</NavLink>
             </>
         )
     }

@@ -5,6 +5,7 @@ import { navLinksThunk } from "../Redux/navLinksThunk";
 import { NavLinks } from "./NavLinks";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { starWarsEvents } from "../events";
 
 export const Header = () => {
 
@@ -23,15 +24,26 @@ export const Header = () => {
     }, [dispatch]);
 
     useEffect(() => {
-        currentPage[0] === '/' && currentPage.length > 2 ? setUpdatedCurrentPage(currentPage.substring(1)) : setUpdatedCurrentPage("DataBank")
+        starWarsEvents.addListener("changeLocation", updateLink);
+        return () => {
+            starWarsEvents.removeListener("changeLocation", updateLink);
+        }
+    }, []);
 
-    }, [currentPage]);
+    // useEffect(() => {
+    //     currentPage[0] === '/' && currentPage.length > 2 ? setUpdatedCurrentPage(currentPage.substring(1)) : setUpdatedCurrentPage("DataBank")
+
+    // }, [currentPage]);
 
     const navLinks = useSelector(state => state.navLinks.navLinks);
 
     const goToAuthentification = () => {
         const uri = "/authentication";
         navigate(uri);
+    }
+
+    const updateLink = (name) => {
+        setUpdatedCurrentPage(name);
     }
 
     return (
