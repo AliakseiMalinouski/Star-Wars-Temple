@@ -867,21 +867,7 @@ li {
 }
 
 .Header .Container .NavLinks .BorderBottomNavLink {
-  animation: neonAnim 2s alternate-reverse infinite;
+  color: white;
   font-weight: bold;
 }
 
-@keyframes neonAnim {
-  from {
-      text-shadow:
-        0 0 10px rgba(255, 253, 213, .7),
-        0 0 40px rgba(255, 253, 213, .7),
-        0 0 100px rgba(255, 253, 213, .7);
-    }
-    to {
-      text-shadow:
-        0 0 5px rgba(255, 253, 213, .7),
-        0 0 20px rgba(255, 253, 213, .7),
-        0 0 60px rgba(255, 253, 213, .7);
-    }
-}
