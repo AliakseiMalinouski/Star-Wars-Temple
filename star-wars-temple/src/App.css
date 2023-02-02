@@ -842,3 +842,25 @@ li {
   width: 100%;
   height: 400px;
 }
+
+.Authentication {
+  color: white;
+}
+
+.Header .Container {
+  position: relative;
+}
+
+.Header .AuthTools {
+  color: white;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.Header .AuthTools img {
+  margin-right: 20px;
+}

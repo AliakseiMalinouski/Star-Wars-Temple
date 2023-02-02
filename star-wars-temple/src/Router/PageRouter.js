@@ -7,6 +7,7 @@ import {PageFilmsDetails} from '../Pages/PageFilmsDetails';
 import { PageFavourite } from '../Pages/PageFavourite';
 import { PageSeries } from '../Pages/PageSeries';
 import { PageDetailsSerial } from '../Pages/PageDetailsSerial';
+import { PageAuthentication } from '../Pages/PageAuthentication';
 
 export const PageRouter = () => {
     return (
@@ -18,6 +19,7 @@ export const PageRouter = () => {
             <Route path='/favouritecharacters' element={<PageFavourite/>}/>
             <Route path='/series' element={<PageSeries/>}/>
             <Route path='/seriesdetails/:seriesname' element={<PageDetailsSerial/>}/>
+            <Route path='/authentication' element={<PageAuthentication/>}/>
         </Routes>
     )
 }
