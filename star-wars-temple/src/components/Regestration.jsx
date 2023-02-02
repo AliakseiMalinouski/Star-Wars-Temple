@@ -1,14 +1,13 @@
 import React from "react";
 import { auth } from "../firebase-config";
 import { useState, useEffect } from "react";
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut} from 'firebase/auth';
+import {createUserWithEmailAndPassword, onAuthStateChanged, signOut} from 'firebase/auth';
+import { NavLink } from "react-router-dom";
 
 export const Regestration = () => {
 
     const [regEmail, setRegEmail] = useState("");
     const [regPass, setRegPass] = useState("");
-    const [loginEmail, setLoginEmail] = useState("");
-    const [loginPass, setLoginPass] = useState("");
     const [currentUser, setCurrentUser] = useState("");
 
     useEffect(() => {
@@ -20,15 +19,6 @@ export const Regestration = () => {
     const createUser = async () => {
         try {
             const user = await createUserWithEmailAndPassword(auth, regEmail, regPass);
-        }
-        catch {
-            alert("Error with regestration");
-        }
-    }
-
-    const loginUser = async () => {
-        try {
-            const user = await signInWithEmailAndPassword(auth, loginEmail, loginPass);
         }
         catch {
             alert("Error with regestration");
@@ -47,14 +37,6 @@ export const Regestration = () => {
         setRegPass(EO.target.value);
     }
 
-    const loginEmailHandle = (EO) => {
-        setLoginEmail(EO.target.value);
-    }
-
-    const loginPasswordHandle = (EO) => {
-        setLoginPass(EO.target.value);
-    }
-
     return (
         <div className="Authentication">
             <div className="RegPart">
@@ -62,13 +44,9 @@ export const Regestration = () => {
                 <input type='text' placeholder='password' value={regPass} onChange={regestrationPasswordHandle}/>
                 <button onClick={createUser}>Create user</button>
             </div>
-            <div className="LogPart">
-                <input type='text' placeholder='email' value={loginEmail} onChange={loginEmailHandle}/>
-                <input type='text' placeholder='password' value={loginPass} onChange={loginPasswordHandle}/>
-                <button onClick={loginUser}>Sign In</button>
-            </div>
             <h3 style={{color: 'white'}}>user logged in as {currentUser}</h3>
             <button onClick={signOutUser}>Sign Out</button>
+            <NavLink style={{color: 'white'}} to='/login'>Sign In</NavLink>
         </div>
     )
 }
