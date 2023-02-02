@@ -864,3 +864,7 @@ li {
 .Header .AuthTools img {
   margin-right: 20px;
 }
+
+.Header .Container .NavLinks .BorderBottomNavLink {
+  color: red;
+}

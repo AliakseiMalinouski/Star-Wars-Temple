@@ -1,17 +1,22 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import { starWarsEvents } from '../events';
+import { useEffect, useCallback } from 'react';
 
 export const NavLinks = ({name, url, namePage}) => {
 
-    const changeLocation = () => {
+    const changeLocation = useCallback(() => {
         starWarsEvents.emit("changeLocation", name);
-    }
+    }, [name])
+
+    useEffect(() => {
+        changeLocation();
+    }, [changeLocation])
 
     if(name === namePage) {
         return (
             <>
-                <NavLink style={{color: 'red'}} onClick={changeLocation} to={url}>{name}</NavLink>
+                <NavLink className='BorderBottomNavLink' onClick={changeLocation} to={url}>{name}</NavLink>
             </>
         )
     }

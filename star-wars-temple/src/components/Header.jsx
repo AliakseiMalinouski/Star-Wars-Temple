@@ -30,11 +30,6 @@ export const Header = () => {
         }
     }, []);
 
-    // useEffect(() => {
-    //     currentPage[0] === '/' && currentPage.length > 2 ? setUpdatedCurrentPage(currentPage.substring(1)) : setUpdatedCurrentPage("DataBank")
-
-    // }, [currentPage]);
-
     const navLinks = useSelector(state => state.navLinks.navLinks);
 
     const goToAuthentification = () => {
