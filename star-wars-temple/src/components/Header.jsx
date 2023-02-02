@@ -1,9 +1,10 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { navLinksThunk } from "../Redux/navLinksThunk";
 import { NavLinks } from "./NavLinks";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export const Header = () => {
 
@@ -11,9 +12,20 @@ export const Header = () => {
 
     let navigate = useNavigate();
 
+    let location = useLocation();
+
+    let currentPage = location.pathname;
+
+    const [updatedCurrentPage, setUpdatedCurrentPage] = useState("");
+
     useEffect(() => {
         dispatch(navLinksThunk);
     }, [dispatch]);
+
+    useEffect(() => {
+        currentPage[0] === '/' && currentPage.length > 2 ? setUpdatedCurrentPage(currentPage.substring(1)) : setUpdatedCurrentPage("DataBank")
+
+    }, [currentPage]);
 
     const navLinks = useSelector(state => state.navLinks.navLinks);
 
@@ -29,7 +41,7 @@ export const Header = () => {
             </div>
             <div className="NavLinks">
                 {
-                    navLinks.map(e => <NavLinks key={e.code} name={e.name} url={e.url}/>)
+                    navLinks.map(e => <NavLinks key={e.code} name={e.name} url={e.url} namePage={updatedCurrentPage}/>)
                 }
             </div>
             <div style={{color: 'white', display: 'flex', alignItems: 'center'}} className='AuthTools' onClick={goToAuthentification}>
