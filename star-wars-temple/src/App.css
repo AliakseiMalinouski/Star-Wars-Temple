@@ -780,3 +780,56 @@ li {
   border-radius: 13px;
   color: white;
 }
+
+.MoreFilm {
+  color: white;
+  padding-top: 100px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.MoreFilm .OtherInfoMoreFilm {
+  width: 60%;
+}
+
+.MoreFilm .OtherInfoMoreFilm h3 {
+  color: white;
+  width: 100%;
+  padding-left: 55px;
+  font-size: 32px;
+}
+
+.MoreFilm .OtherInfoMoreFilm h5 {
+  color: #B5B7B7;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 55px;
+}
+
+.MoreFilm .OtherInfoMoreFilm p {
+  margin-top: 30px;
+  padding-left: 55px;
+  line-height: 30px;
+}
+
+.MoreFilm .OtherInfoMoreFilm div h6 {
+  margin-left: 55px;
+  margin-top: 30px;
+  font-size: 25px;
+  border: 1px solid white;
+  color: white;
+  width: 10%;
+  text-align: center;
+}
+
+.MoreFilm .OtherInfoMoreFilm div {
+  width: 100%;
+  display: flex;
+}
+
+.MoreFilm .OtherInfoMoreFilm div p {
+  font-size: 20px;
+  font-weight: 500;
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { skywalkerSagaThunk } from "../Redux/skywalkerSagaThunk";
+import { MoreFilm } from "./MoreFilm";
 
 export const FilmDetails = React.memo(() => {
 
@@ -20,13 +21,32 @@ export const FilmDetails = React.memo(() => {
         if(!skywalkerSagaFilms.length) dispatch(skywalkerSagaThunk);
         let neededFilm = skywalkerSagaFilms.find(elem => elem.title === filmName);
         setCurrentFilm(neededFilm);
-    }, [skywalkerSagaFilms, setCurrentFilm, dispatch, filmName])
+    }, [skywalkerSagaFilms, setCurrentFilm, dispatch, filmName]);
 
-    console.log(currentFilm)
+
+    let currentFilmMemoizeed = useMemo(() => 
+    currentFilm === undefined || currentFilm === {} || currentFilm === null
+    ?
+    null
+    :
+    <MoreFilm 
+    key={currentFilm.movie_id}
+    title={currentFilm.title}
+    type={currentFilm.type}
+    genre={currentFilm.category_name}
+    year={currentFilm.release_year}
+    duration={currentFilm.running_time}
+    pg={currentFilm.rating_name}
+    disc={currentFilm.disc_format_name}
+    viewing={currentFilm.viewing_format_name}
+    image={currentFilm.image}
+    description={currentFilm.description}
+    />, [currentFilm]
+    )
 
     return (
         <div style={{color: 'white'}}>
-            some info about {filmName}
+            {currentFilmMemoizeed}
         </div>
     )
 })
