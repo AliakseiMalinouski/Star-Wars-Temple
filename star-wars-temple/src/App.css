@@ -835,8 +835,10 @@ li {
 }
 
 .Error {
-  background-image: url(https://lumiere-a.akamaihd.net/v1/images/e404-4ced2cd1702d_bb1ae7b9.jpeg?region=0,0,964,647);
-  background-position: center;
+  background-image: url(https://i.ibb.co/KVq7M25/e404-4ced2cd1702d-bb1ae7b9-removebg-preview.png);
+  background-position: center top;
   background-repeat: no-repeat;
+  background-size: 25% 60%;
   width: 100%;
+  height: 400px;
 }

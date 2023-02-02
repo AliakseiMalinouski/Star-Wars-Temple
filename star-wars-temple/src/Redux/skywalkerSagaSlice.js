@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    films: []
+    films: [],
+    loadState: 0
 }
 
 export const skywalkerSagaSlice = createSlice({
@@ -10,9 +11,12 @@ export const skywalkerSagaSlice = createSlice({
     reducers: {
         setFilms: (state, action) => {
             state.films = action.payload;
+        },
+        updateLoadStateSkywalkerFilms: (state, action) => {
+            state.loadState = action.payload;
         }
     }
 });
 
-export const {setFilms} = skywalkerSagaSlice.actions;
+export const {setFilms, updateLoadStateSkywalkerFilms} = skywalkerSagaSlice.actions;
 export default skywalkerSagaSlice.reducer;

@@ -9,11 +9,13 @@ import { categoriesFilmThunk } from "../Redux/categoriesFilmsThunk";
 import { starWarsEvents } from "../events";
 import { Error } from "./Error";
 
+
 export const Films = () => {
 
     let dispatch = useDispatch();
 
     const skywalkerSagaFilms = useSelector(state => state.skywalkerSaga.films);
+    const skywalkerSagaFilmsLoadState = useSelector(state => state.skywalkerSaga.loadState);
     const categoriesFilms = useSelector(state => state.filterFilm.categories);
 
     const [currentTitle, setCurrentTitle] = useState("All");
@@ -76,7 +78,9 @@ export const Films = () => {
             <h3 className="FilteringByFilm">Filtering by film</h3>
             <ul className="FilterFilms">{categoriesMemoizeed}</ul>
             <div className="Films" style={{justifyContent: filmsMemoizeed.length <= 2 ? "space-around" : "space-evenly"}}>
-                {filmsMemoizeed}
+                {(skywalkerSagaFilmsLoadState === 1 && <div>Wait a moment</div>)}
+                {(skywalkerSagaFilmsLoadState === 2 && filmsMemoizeed)}
+                {(skywalkerSagaFilmsLoadState === 3 && <Error/>)}
             </div>
         </>
     )
