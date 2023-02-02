@@ -833,3 +833,10 @@ li {
   font-size: 20px;
   font-weight: 500;
 }
+
+.Error {
+  background-image: url(https://lumiere-a.akamaihd.net/v1/images/e404-4ced2cd1702d_bb1ae7b9.jpeg?region=0,0,964,647);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}

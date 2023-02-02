@@ -7,6 +7,7 @@ import { FilmSkywalkerSaga } from "./FilmSkywalkerSaga";
 import { FilterFilms } from "./FilterFilms";
 import { categoriesFilmThunk } from "../Redux/categoriesFilmsThunk";
 import { starWarsEvents } from "../events";
+import { Error } from "./Error";
 
 export const Films = () => {
 
