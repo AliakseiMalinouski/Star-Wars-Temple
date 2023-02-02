@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { navLinksThunk } from "../Redux/navLinksThunk";
 import { NavLinks } from "./NavLinks";
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import { starWarsEvents } from "../events";
 
 export const Header = () => {
@@ -13,9 +12,6 @@ export const Header = () => {
 
     let navigate = useNavigate();
 
-    let location = useLocation();
-
-    let currentPage = location.pathname;
 
     const [updatedCurrentPage, setUpdatedCurrentPage] = useState("");
 
