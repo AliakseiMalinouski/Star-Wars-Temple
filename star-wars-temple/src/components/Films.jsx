@@ -21,12 +21,12 @@ export const Films = () => {
     const [currentTitle, setCurrentTitle] = useState("All");
 
     useEffect(() => {   
-        dispatch(skywalkerSagaThunk);
-    }, [dispatch]);
+        if(!skywalkerSagaFilms.length) dispatch(skywalkerSagaThunk);
+    }, [dispatch, skywalkerSagaFilms]);
 
     useEffect(() => {
-        dispatch(categoriesFilmThunk);
-    }, [dispatch]);
+        if(!categoriesFilms.length) dispatch(categoriesFilmThunk);
+    }, [dispatch, categoriesFilms]);
 
     useEffect(() => {
         starWarsEvents.addListener("SelectCategory", changeCategory);

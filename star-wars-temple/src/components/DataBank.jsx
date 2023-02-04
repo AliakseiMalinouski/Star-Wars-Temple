@@ -11,13 +11,16 @@ export const DataBank = React.memo(() => {
 
     let dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(titlesThunk);
-    }, [dispatch]);
+    const titlesFilter = useSelector(state => state.titles.titles);
+    const universe = useSelector(state => state.universe.universe);
 
     useEffect(() => {
-        dispatch(universeThunk)
-    }, [dispatch]);
+        if(!titlesFilter.length) dispatch(titlesThunk);
+    }, [dispatch, titlesFilter]);
+
+    useEffect(() => {
+        if(!universe.length) dispatch(universeThunk);
+    }, [dispatch, universe]);
 
     useEffect(() => {
         starWarsEvents.addListener('Select', filteredCategories);
@@ -27,9 +30,6 @@ export const DataBank = React.memo(() => {
     }, []);
 
     const [currentTitle, setCurrentTitle] = useState("All");
-
-    const titlesFilter = useSelector(state => state.titles.titles);
-    const universe = useSelector(state => state.universe.universe);
 
     const filteredCategories = (name) => {
         setCurrentTitle(name);

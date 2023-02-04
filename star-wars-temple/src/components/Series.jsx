@@ -14,12 +14,12 @@ export const Series = React.memo(() => {
     const posters = useSelector(state => state.posters.posters);
 
     useEffect(() => {
-        dispatch(seriesThunk)
-    }, [dispatch]);
+        if(!series.length) dispatch(seriesThunk)
+    }, [dispatch, series]);
 
     useEffect(() => {
-        dispatch(postersThunk)
-    }, [dispatch]);
+        if(!posters.length) dispatch(postersThunk)
+    }, [dispatch, posters]);
 
     let seriesMemoizeed = useMemo(() => series.map(e => <Serial 
     key={e.code}
