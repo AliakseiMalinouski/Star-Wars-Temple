@@ -6,6 +6,7 @@ import { PageRouter } from './Router/PageRouter';
 import './App.css';
 import { Header } from './components/Header';
 import { StreamingBanner } from './components/StreamingBanner';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
         <div className='Content'>
           <div className='Container'>
             <PageRouter/>
+          </div>
+        </div>
+        <div className='Footer'>
+          <div className='Container'>
+            <Footer/>
           </div>
         </div>
       </Provider>

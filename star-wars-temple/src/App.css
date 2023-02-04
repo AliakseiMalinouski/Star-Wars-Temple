@@ -715,7 +715,7 @@ li {
   width: 100%;
   color: white;
   height: 600px;
-  margin-bottom: 60px;
+  margin-top: 60px;
   border-radius: 13px;
   position: relative;
   display: flex;
@@ -870,3 +870,30 @@ li {
   color: white;
 }
 
+.SocialNetworks {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.Footer .Container h3 {
+  width: 100%;
+  padding-bottom: 50px;
+  padding-top: 120px;
+  text-align: center;
+  color: white;
+  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.SocialNetworks .SocialNetwork img {
+  width: 48px;
+}
+
+.SocialNetworks .SocialNetwork:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
