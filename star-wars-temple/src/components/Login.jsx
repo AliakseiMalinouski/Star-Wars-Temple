@@ -8,6 +8,7 @@ export const Login = () => {
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPass, setLoginPass] = useState("");
     const [currentUser, setCurrentUser] = useState("");
+    const [active, setActive] = useState(true);
 
     useEffect(() => {
         onAuthStateChanged(auth, currentUser => {
@@ -26,17 +27,19 @@ export const Login = () => {
 
     const loginEmailHandle = (EO) => {
         setLoginEmail(EO.target.value);
+        validationLogin(EO.target.value, loginPass);
     }
 
     const loginPasswordHandle = (EO) => {
         setLoginPass(EO.target.value);
+        validationLogin(EO.target.value, loginEmail);
     }
 
     const signOutUser = () => {
         signOut(auth);
     }
 
-    console.log(currentUser)
+    const validationLogin = (currentValue, previousValue) => currentValue === "" || previousValue === "" || currentValue.length < 12 || previousValue.length < 12 ? setActive(true) : setActive(false);
 
     if(currentUser === "" || currentUser === undefined || currentUser === null) {
         return (
@@ -48,7 +51,7 @@ export const Login = () => {
                 <div className="LoginTools">
                     <input type='text' placeholder='email' value={loginEmail} onChange={loginEmailHandle}/>
                     <input type='text' placeholder='password' value={loginPass} onChange={loginPasswordHandle}/>
-                    <button onClick={loginUser}>Sign In</button>
+                    <button onClick={loginUser} style={{opacity: active ? '0.5' : '1'}} disabled={active}>Sign In</button>
                 </div>
             </div>
         )
