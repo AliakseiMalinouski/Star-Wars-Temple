@@ -58,8 +58,8 @@ export const Login = () => {
     }
     else {
         return (
-            <div>
-                <h3 style={{color: 'white'}}>user logged in as {currentUser}</h3>
+            <div className="LoggedUser">
+                <h3 style={{color: 'white'}}>You are authorised as: <span>{currentUser}</span></h3>
                 <button onClick={signOutUser}>Sign Out</button>
             </div>
         )

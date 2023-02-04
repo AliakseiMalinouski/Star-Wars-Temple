@@ -978,3 +978,42 @@ li {
   transition: 0.5s;
   opacity: 0.9;
 }
+
+
+.LoggedUser {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 700px;
+  align-items: center;
+  background-color: #181818;
+  transform: translate(0, 20%);
+  border-radius: 13px;
+}
+
+
+.LoggedUser button {
+  width: 50%;
+  background-color: #484848;
+  transition: background-color .3s ease;
+  color: #f4f5f5;
+  font-size: 16px;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+}
+
+.LoggedUser button:hover {
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+.LoggedUser h3 {
+  font-size: 24px;
+}
+
+.LoggedUser h3 span {
+  color: orange;
+}
