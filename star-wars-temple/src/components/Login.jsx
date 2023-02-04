@@ -41,9 +41,15 @@ export const Login = () => {
     if(currentUser === "" || currentUser === undefined || currentUser === null) {
         return (
             <div className="Login">
-                <input type='text' placeholder='email' value={loginEmail} onChange={loginEmailHandle}/>
-                <input type='text' placeholder='password' value={loginPass} onChange={loginPasswordHandle}/>
-                <button onClick={loginUser}>Sign In</button>
+                <div className="LoginImages">
+                    <img src="https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_disney_icon_158933.png" alt="Disney"/>
+                    <img src="https://img.icons8.com/color/256/star-wars.png" alt="Star Wars"/>
+                </div>
+                <div className="LoginTools">
+                    <input type='text' placeholder='email' value={loginEmail} onChange={loginEmailHandle}/>
+                    <input type='text' placeholder='password' value={loginPass} onChange={loginPasswordHandle}/>
+                    <button onClick={loginUser}>Sign In</button>
+                </div>
             </div>
         )
     }

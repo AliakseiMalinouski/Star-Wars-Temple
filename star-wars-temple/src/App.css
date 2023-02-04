@@ -916,3 +916,65 @@ li {
   transform: scale(1.1);
 }
 
+.Login {
+  width: 50%;
+  margin: 0 auto;
+  height: 500px;
+  background-color: #181818;
+  transform: translate(0, 10%);
+  border-radius: 13px;
+}
+
+.Login .LoginImages {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+.Login .LoginImages img {
+  width: 200px;
+}
+
+.Login .LoginTools {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 260px;
+}
+
+.Login .LoginTools input {
+  width: 60%;
+  padding-left: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.Login .LoginTools input:focus {
+  outline: none;
+  outline-offset: none;
+}
+
+
+.Login .LoginTools button {
+  width: 50%;
+  background-color: #484848;
+  transition: background-color .3s ease;
+  color: #f4f5f5;
+  font-size: 16px;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+}
+
+
+.Login .LoginTools button:hover {
+  transition: 0.5s;
+  opacity: 0.9;
+}
