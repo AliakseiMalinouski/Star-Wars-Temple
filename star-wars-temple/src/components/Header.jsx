@@ -7,16 +7,21 @@ import { useNavigate } from "react-router-dom";
 import { starWarsEvents } from "../events";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase-config";
+import { avatarThunk } from "../Redux/avatarThunk";
 
-export const Header = () => {
+export const Header = React.memo(() => {
 
     let dispatch = useDispatch();
 
     let navigate = useNavigate();
 
+    const navLinks = useSelector(state => state.navLinks.navLinks);
+    const avatars = useSelector(state => state.avatar.avatars);
+
 
     const [updatedCurrentPage, setUpdatedCurrentPage] = useState("");
     const [currentUser, setCurrentUser] = useState("");
+    const [currentAvatar, setCurrentAvatar] = useState("");
 
     useEffect(() => {
         onAuthStateChanged(auth, currentInfoUser => {
@@ -25,8 +30,18 @@ export const Header = () => {
     }, []);
 
     useEffect(() => {
-        dispatch(navLinksThunk);
-    }, [dispatch]);
+        let randomIndex = Math.floor(Math.random() * avatars.length);
+        let randomAvatar = avatars[randomIndex];
+        setCurrentAvatar(randomAvatar?.image);
+    }, [currentUser, avatars]);
+
+    useEffect(() => {
+        if(!navLinks.length) dispatch(navLinksThunk);
+    }, [dispatch, navLinks]);
+
+    useEffect(() => {
+        if(!avatars.length) dispatch(avatarThunk);
+    }, [dispatch, avatars]);
 
     useEffect(() => {
         starWarsEvents.addListener("changeLocation", updateLink);
@@ -35,7 +50,7 @@ export const Header = () => {
         }
     }, []);
 
-    const navLinks = useSelector(state => state.navLinks.navLinks);
+
 
     const goToAuthentification = () => {
         const uri = "/authentication";
@@ -60,11 +75,11 @@ export const Header = () => {
                 {
                     currentUser === "" || currentUser === undefined || currentUser === null || currentUser === {}
                     ?
-                    <><img style={{width: '50px'}} src="https://img.icons8.com/plasticine/256/stormtrooper.png" alt="Person"/><span>Sign In</span> </>
+                    <><img style={{width: '40px'}} src="https://img.icons8.com/plasticine/256/stormtrooper.png" alt="Person"/><span>Sign In</span> </>
                     :
-                    <><img style={{width: '50px'}} src="https://img.icons8.com/plasticine/256/stormtrooper.png" alt="Person"/> <span>{currentUser}</span></>
+                    <><img style={{width: '40px'}} src={currentAvatar} alt="Person"/> <span>{currentUser}</span></>
                 }
             </div>
         </div>
     )
-}
+})

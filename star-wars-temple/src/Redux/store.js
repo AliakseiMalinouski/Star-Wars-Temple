@@ -11,6 +11,7 @@ import seriesSlice from './seriesSlice';
 import postersSlice from './postersSlice';
 import socialNetworksSlice from './socialNetworksSlice';
 import copyRightSlice from './copyRightSlice';
+import avatarSlice from './avatarSlice';
 
 export const store = configureStore({
     reducer: {
@@ -24,6 +25,7 @@ export const store = configureStore({
         series: seriesSlice,
         posters: postersSlice,
         networks: socialNetworksSlice,
-        copy: copyRightSlice
+        copy: copyRightSlice,
+        avatar: avatarSlice,
     }
 });
