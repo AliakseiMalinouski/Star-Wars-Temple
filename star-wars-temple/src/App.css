@@ -47,7 +47,23 @@ li {
   background-color: black;
   padding-left: 50px;
   padding-right: 50px;
+  animation: con 1s linear;
 }
+
+.Header {
+  animation: con 1s linear;
+}
+
+@keyframes con {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 
 .Content .Container {
   width: 1600px;
@@ -1014,6 +1030,17 @@ li {
   font-size: 24px;
 }
 
-.LoggedUser h3 span {
+.AllInfoAboutUser li{
+  color: white;
+  line-height: 35px;
+  font-size: 18px;
+}
+
+
+.AllInfoAboutUser li {
   color: orange;
+}
+
+.AllInfoAboutUser li span {
+  color: white;
 }

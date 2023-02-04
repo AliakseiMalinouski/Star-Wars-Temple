@@ -12,6 +12,7 @@ import postersSlice from './postersSlice';
 import socialNetworksSlice from './socialNetworksSlice';
 import copyRightSlice from './copyRightSlice';
 import avatarSlice from './avatarSlice';
+import dataCurrentUserSlice from './dataCurrentUserSlice';
 
 export const store = configureStore({
     reducer: {
@@ -27,5 +28,6 @@ export const store = configureStore({
         networks: socialNetworksSlice,
         copy: copyRightSlice,
         avatar: avatarSlice,
+        userData: dataCurrentUserSlice,
     }
 });
