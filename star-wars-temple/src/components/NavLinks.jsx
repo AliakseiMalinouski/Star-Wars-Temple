@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom';
 import { starWarsEvents } from '../events';
 import { useEffect, useCallback } from 'react';
 
+
 export const NavLinks = ({name, url, namePage}) => {
 
     const changeLocation = useCallback(() => {

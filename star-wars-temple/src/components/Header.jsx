@@ -5,6 +5,8 @@ import { navLinksThunk } from "../Redux/navLinksThunk";
 import { NavLinks } from "./NavLinks";
 import { useNavigate } from "react-router-dom";
 import { starWarsEvents } from "../events";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../firebase-config";
 
 export const Header = () => {
 
@@ -14,6 +16,13 @@ export const Header = () => {
 
 
     const [updatedCurrentPage, setUpdatedCurrentPage] = useState("");
+    const [currentUser, setCurrentUser] = useState("");
+
+    useEffect(() => {
+        onAuthStateChanged(auth, currentInfoUser => {
+            setCurrentUser(currentInfoUser?.email);
+        })
+    }, []);
 
     useEffect(() => {
         dispatch(navLinksThunk);
@@ -48,7 +57,13 @@ export const Header = () => {
                 }
             </div>
             <div style={{color: 'white', display: 'flex', alignItems: 'center'}} className='AuthTools' onClick={goToAuthentification}>
-                <img style={{width: '50px'}} src="https://img.icons8.com/plasticine/256/stormtrooper.png" alt="Person"/> <span>Sign In</span> 
+                {
+                    currentUser === "" || currentUser === undefined || currentUser === null || currentUser === {}
+                    ?
+                    <><img style={{width: '50px'}} src="https://img.icons8.com/plasticine/256/stormtrooper.png" alt="Person"/><span>Sign In</span> </>
+                    :
+                    <><img style={{width: '50px'}} src="https://img.icons8.com/plasticine/256/stormtrooper.png" alt="Person"/> <span>{currentUser}</span></>
+                }
             </div>
         </div>
     )
