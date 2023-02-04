@@ -897,3 +897,21 @@ li {
   transition: 0.5s;
   transform: scale(1.2);
 }
+
+.CopyRight {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.CopyRight a {
+  color: white;
+  font-size: 11px;
+  padding-bottom: 50px;
+}
+
+.CopyRight a:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
