@@ -18,10 +18,10 @@ export const Login = () => {
 
     const loginUser = async () => {
         try {
-            const user = await signInWithEmailAndPassword(auth, loginEmail, loginPass);
+            await signInWithEmailAndPassword(auth, loginEmail, loginPass);
         }
         catch {
-            alert("Error with regestration");
+            alert("Error with login");
         }
     }
 
@@ -39,7 +39,7 @@ export const Login = () => {
         signOut(auth);
     }
 
-    const validationLogin = (currentValue, previousValue) => currentValue === "" || previousValue === "" || currentValue.length < 12 || previousValue.length < 12 ? setActive(true) : setActive(false);
+    const validationLogin = (currentValue, previousValue) => currentValue === "" || previousValue === "" ? setActive(true) : setActive(false);
 
     if(currentUser === "" || currentUser === undefined || currentUser === null) {
         return (
