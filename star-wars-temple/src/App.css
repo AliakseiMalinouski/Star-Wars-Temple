@@ -1199,3 +1199,52 @@ li {
   text-align: center;
   padding-top: 40px;
 }
+
+.CurrentConsoleOrPcGame {
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CurrentConsoleOrPcGame img {
+  width: 40%;
+}
+
+.CurrentConsoleOrPcGame .MoreAboutCurrentConsoleOrPcGame {
+  width: 55%;
+  height: auto;
+}
+
+
+.CurrentConsoleOrPcGame .MoreAboutCurrentConsoleOrPcGame h4 {
+  font-size: 28px;
+  width: 100%;
+  padding-bottom: 30px;
+  color: white;
+}
+
+.CurrentConsoleOrPcGame .MoreAboutCurrentConsoleOrPcGame p {
+  color: #B5B7B7;
+  line-height: 30px;
+  padding-bottom: 30px;
+}
+
+.CurrentConsoleOrPcGame .MoreAboutCurrentConsoleOrPcGame a {
+  border-radius: 20px;
+  background-color: #fade4b;
+  width: 150px;
+  display: block;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: 500;
+}
+
+
+.CurrentConsoleOrPcGame .MoreAboutCurrentConsoleOrPcGame a:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+}
