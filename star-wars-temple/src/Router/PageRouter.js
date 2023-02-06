@@ -11,6 +11,7 @@ import { PageAuthentication } from '../Pages/PageAuthentication';
 import { PageLogin } from '../Pages/PageLogin';
 import {PageInteractive} from '../Pages/PageInteractive';
 import {PageDetailsNewGame} from '../Pages/PageDetailsNewGame';
+import { PageDetailsConsolePcGames } from '../Pages/PageDetailsConsolePcGames';
 
 export const PageRouter = () => {
     return (
@@ -26,6 +27,7 @@ export const PageRouter = () => {
             <Route path='/login' element={<PageLogin/>}/>
             <Route path='/interactive' element={<PageInteractive/>}/>
             <Route path='/detailsnewgame/:newgamename' element={<PageDetailsNewGame/>}/>
+            <Route path='/detailsconsoleorpcgame/:consoleorpcgamename' element={<PageDetailsConsolePcGames/>}/>
         </Routes>
     )
 }
