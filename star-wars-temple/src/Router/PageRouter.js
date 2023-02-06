@@ -9,6 +9,8 @@ import { PageSeries } from '../Pages/PageSeries';
 import { PageDetailsSerial } from '../Pages/PageDetailsSerial';
 import { PageAuthentication } from '../Pages/PageAuthentication';
 import { PageLogin } from '../Pages/PageLogin';
+import {PageInteractive} from '../Pages/PageInteractive';
+import {PageDetailsNewGame} from '../Pages/PageDetailsNewGame';
 
 export const PageRouter = () => {
     return (
@@ -22,6 +24,8 @@ export const PageRouter = () => {
             <Route path='/seriesdetails/:seriesname' element={<PageDetailsSerial/>}/>
             <Route path='/authentication' element={<PageAuthentication/>}/>
             <Route path='/login' element={<PageLogin/>}/>
+            <Route path='/interactive' element={<PageInteractive/>}/>
+            <Route path='/detailsnewgame/:newgamename' element={<PageDetailsNewGame/>}/>
         </Routes>
     )
 }

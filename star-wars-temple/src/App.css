@@ -1044,3 +1044,108 @@ li {
 .AllInfoAboutUser li span {
   color: white;
 }
+
+.NewGames {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  padding-top: 100px;
+}
+
+.NewGames .NewGame {
+  height: 534px;
+  width: 25%;
+  border-radius: 13px;
+  background-color: #202124;
+  cursor: pointer;
+}
+
+
+.NewGames .NewGame:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+.NewGames .NewGame img {
+  width: 100%;
+  height: 70%;
+  border-top-right-radius: 13px;
+  border-top-left-radius: 13px;
+}
+
+
+.NewGames .NewGame h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  padding-top: 20px;
+}
+
+.NewGames .NewGame p {
+  color: #B5B7B7;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.MoreAboutNewGame {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.MoreAboutNewGame h2 {
+  color: white;
+  font-size: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #B5B7B7;
+}
+
+.MoreAboutNewGame h3 {
+  color: white;
+  font-size: 24px;
+  padding-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.MoreAboutNewGame ul {
+  width: 100%;
+  padding-top: 30px;
+}
+
+
+.MoreAboutNewGame ul li {
+  color: #B5B7B7;
+  line-height: 35px;
+}
+
+
+.MoreAboutNewGame .OtherInformationAboutTheNewGame {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.MoreAboutNewGame .OtherInformationAboutTheNewGame img {
+  width: 30%;
+  height: 100%;
+}
+
+.MoreAboutNewGame .OtherInformationAboutTheNewGame p {
+  color: #B5B7B7;
+  font-weight: 500;
+  width: 68%;
+  line-height: 30px;
+}
+
+.MoreAboutNewGame .DateOfTheNewGame {
+  color: white;
+  width: 30%;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 18px;
+}

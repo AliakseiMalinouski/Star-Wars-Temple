@@ -13,6 +13,7 @@ import socialNetworksSlice from './socialNetworksSlice';
 import copyRightSlice from './copyRightSlice';
 import avatarSlice from './avatarSlice';
 import dataCurrentUserSlice from './dataCurrentUserSlice';
+import interactiveNewSlice from './interactiveNewSlice';
 
 export const store = configureStore({
     reducer: {
@@ -29,5 +30,6 @@ export const store = configureStore({
         copy: copyRightSlice,
         avatar: avatarSlice,
         userData: dataCurrentUserSlice,
+        newgames: interactiveNewSlice
     }
 });
