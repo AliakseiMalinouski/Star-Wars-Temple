@@ -22,8 +22,11 @@ export const Interactive = React.memo(() => {
     , [newGames])
 
     return (
+       <>
+        <h4 className="NewGamesAndAppsTitle">The Latest | Star Wars Games + Apps</h4>
         <div className="NewGames">
             {newGamesMemoizeed}
         </div>
+       </>
     )
 })

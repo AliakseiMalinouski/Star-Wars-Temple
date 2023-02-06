@@ -1,7 +1,7 @@
 import { setNewGames } from "./interactiveNewSlice";
 
 export const interactiveNewThunk = (dispatch) => {
-    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/cc372f33cb8285dd987daad861981648/raw/a6306de1fdf23eb73600c549352d9b7586a5498a/InteractiveStarWars",
+    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/cc372f33cb8285dd987daad861981648/raw/1ef42350fd85c561c74e00cccdaf247ea1f25deb/InteractiveStarWars",
     {
         method: 'get'
     }
