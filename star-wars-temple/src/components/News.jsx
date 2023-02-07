@@ -40,7 +40,8 @@ export const News = React.memo(() => {
     key={e.code}
     title={e.title}
     filterState={filterState}
-    />), [newsTitles, filterState]
+    currentTitle={currentCategory}
+    />), [newsTitles, filterState, currentCategory]
     )
 
     let categoriesNewsMemoizeed = useMemo(() => categoriesNews === undefined || categoriesNews === [] || categoriesNews === null
