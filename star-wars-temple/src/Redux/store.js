@@ -15,6 +15,8 @@ import avatarSlice from './avatarSlice';
 import dataCurrentUserSlice from './dataCurrentUserSlice';
 import interactiveNewSlice from './interactiveNewSlice';
 import consolePcGamesSlice from './consolePcGamesSlice';
+import newsFilterSlice from './newsFilterSlice';
+import categoriesNewsSlice from './categoriesNewsSlice';
 
 export const store = configureStore({
     reducer: {
@@ -32,6 +34,8 @@ export const store = configureStore({
         avatar: avatarSlice,
         userData: dataCurrentUserSlice,
         newgames: interactiveNewSlice,
-        consolepcgames: consolePcGamesSlice
+        consolepcgames: consolePcGamesSlice,
+        filterNews: newsFilterSlice,
+        categoriesNews: categoriesNewsSlice
     }
 });

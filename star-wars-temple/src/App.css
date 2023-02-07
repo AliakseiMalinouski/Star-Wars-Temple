@@ -1248,3 +1248,60 @@ li {
   transition: 0.5s;
   transform: scale(1.05);
 }
+
+.News {
+  padding-top: 100px;
+}
+
+.News h3 {
+  color: white;
+  padding-bottom: 50px;
+  font-size: 28px;
+}
+
+.News .NewsFilter {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.News .NewsFilter .NewsTitle {
+  color: #B5B7B7;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.News .NewsFilter .NewsTitle:hover {
+  transition: 0.5s;
+  color: white;
+}
+
+.News .NewsFilter .ClosedFilterNews {
+  background-color: #48494a;
+  width: 100%;
+  height: 45px;
+  border-radius: 6px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.News .NewsFilter .ClosedFilterNews:hover {
+  transform: scale(1.03);
+  transition: 0.5s;
+}
+
+.News .NewsFilter .ContentNewsPoster img {
+  width: 100%;
+  transform: translateY(100px);
+}
+
+.News .CurrentPost {
+  width: 77%;
+  color: white;
+  margin: 0 auto;
+  padding-top: 150px;
+}
