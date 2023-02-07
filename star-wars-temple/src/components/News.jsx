@@ -5,11 +5,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { newsFilterThunk } from "../Redux/newsFilterThunk";
 import { starWarsEvents } from "../events";
 import { categoriesNewsThunk } from "../Redux/categoriesNewsThunk";
-import { CurrentPost } from "./CurrentPost";
+import {useNavigate} from 'react-router-dom';
 
 export const News = React.memo(() => {
 
     let dispatch = useDispatch();
+
+    let navigate = useNavigate();
 
     const newsTitles = useSelector(state => state.filterNews.filterNewsTitles);
     const categoriesNews = useSelector(state => state.categoriesNews.categories)
@@ -44,21 +46,14 @@ export const News = React.memo(() => {
     />), [newsTitles, filterState, currentCategory]
     )
 
-    let categoriesNewsMemoizeed = useMemo(() => categoriesNews === undefined || categoriesNews === [] || categoriesNews === null
-    ?
-    null
-    :
-    categoriesNews.filter(elem => {
-        return elem.name === currentCategory;
-    }).map(e => <CurrentPost key={e.code} currentPost={e}/>), [currentCategory, categoriesNews]
-    )
-
     const openCategoriesNews = () => {
         setFilterState(true);
     }
 
     const changeCategoryNews = (title) => {
         setCurrentCategory(title);
+        const uri = "/detailsnewspost/" + title;
+        navigate(uri);
     }
 
     return (
@@ -78,13 +73,7 @@ export const News = React.memo(() => {
                     </div>
                 }
             </div>
-            {
-                    currentCategory === ""
-                    ?
-                    null
-                    :
-                    <>{categoriesNewsMemoizeed}</>
-                }
+        
         </div>
     )
 })

@@ -1302,7 +1302,7 @@ li {
   transform: translateY(100px);
 }
 
-.News .CurrentPost {
+.CurrentPost {
   width: 77%;
   color: white;
   margin: 0 auto;
@@ -1310,14 +1310,8 @@ li {
 }
 
 
-.News .CurrentPost h2 {
-  width: 100%;
-  text-align: center;
-  font-size: 34px;
-  padding-bottom: 50px;
-}
 
-.News .CurrentPost .AboutPost {
+.CurrentPost .AboutPost {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1325,7 +1319,7 @@ li {
   align-items: center;
 }
 
-.News .CurrentPost .AboutPost .MainImagePost {
+.CurrentPost .AboutPost .MainImagePost {
   width: 100%;
   animation: imgMain 0.8s linear;
 }
@@ -1339,14 +1333,15 @@ li {
   }
 }
 
-.News .CurrentPost .AboutPost .MoreAboutPostNews {
-  padding-top: 100px;
+.CurrentPost .AboutPost .MoreAboutPostNews {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   animation: mapn 0.8s linear;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @keyframes mapn {
@@ -1358,7 +1353,18 @@ li {
   }
 }
 
-.News .CurrentPost .AboutPost .MoreAboutPostNews p {
+.CurrentPost .AboutPost img {
+  width: 100%;
+}
+
+.CurrentPost .AboutPost h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 34px;
+  padding-bottom: 50px;
+}
+
+ .CurrentPost .AboutPost .MoreAboutPostNews p {
   line-height: 35px;
   font-size: 18px;
   font-weight: 500;
@@ -1366,22 +1372,23 @@ li {
   text-align: center;
 }
 
-.News .CurrentPost .AboutPost .MoreAboutPostNews h4 {
+.CurrentPost .AboutPost .MoreAboutPostNews h4 {
   width: 100%;
   padding-top: 20px;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 
-.News .CurrentPost .AboutPost .MoreAboutPostNews a {
+.CurrentPost .AboutPost .MoreAboutPostNews a {
   color: purple;
   line-height: 30px;
   text-align: center;
   padding-top: 20px;
 }
 
-.News .CurrentPost .AboutPost .MoreAboutPostNews a:hover {
+.CurrentPost .AboutPost .MoreAboutPostNews a:hover {
   transition: 0.5s;
   color: blue;
 }

@@ -13,6 +13,7 @@ import {PageInteractive} from '../Pages/PageInteractive';
 import {PageDetailsNewGame} from '../Pages/PageDetailsNewGame';
 import { PageDetailsConsolePcGames } from '../Pages/PageDetailsConsolePcGames';
 import {PageNews} from '../Pages/PageNews';
+import { PageCurrentPost } from '../Pages/PageCurrentPost';
 
 export const PageRouter = () => {
     return (
@@ -30,6 +31,7 @@ export const PageRouter = () => {
             <Route path='/detailsnewgame/:newgamename' element={<PageDetailsNewGame/>}/>
             <Route path='/detailsconsoleorpcgame/:consoleorpcgamename' element={<PageDetailsConsolePcGames/>}/>
             <Route path='/news' element={<PageNews/>}/>
+            <Route path='/detailsnewspost/:postname' element={<PageCurrentPost/>}/>
         </Routes>
     )
 }

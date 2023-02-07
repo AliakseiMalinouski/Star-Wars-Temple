@@ -1,22 +1,41 @@
 import React, { useMemo } from "react";
-import { MoreAboutPostNews } from "./MoreAboutPostNews";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { categoriesNewsThunk } from "../Redux/categoriesNewsThunk";
+import { useSelector, useDispatch } from "react-redux";
+import { InformationAboutCurrentPost } from "./InformationAboutCurrentPost";
 
-export const CurrentPost = React.memo(({currentPost}) => {
+export const CurrentPost = React.memo(() => {
 
-    let morePostMemoizeed = useMemo(() => currentPost.post === undefined || currentPost.post === [] || currentPost.post === null
+    let params = useParams();
+
+    let dispatch = useDispatch();
+
+    let currentPostName = params.postname;
+
+    const categoriesNews = useSelector(state => state.categoriesNews.categories);
+
+    const [currentPost, setCurrentPost] = useState({});
+
+    useEffect(() => {
+        if(!categoriesNews.length) dispatch(categoriesNewsThunk);
+        let post = categoriesNews.find(elem => elem.name === currentPostName);
+        setCurrentPost(post);
+    }, [categoriesNews, dispatch, currentPostName, setCurrentPost]);
+
+    let currentPostMemoizeed = useMemo(() => currentPost === undefined || currentPost === {} || currentPost === null
     ?
     null
     :
-    currentPost.post.map(e => <MoreAboutPostNews key={e.id} title={e.title} description={e.description} links={e.links} image={e.image}/>), [currentPost]
+    <InformationAboutCurrentPost key={currentPost.code} item={currentPost}/>, [currentPost]
     )
+
+    console.log(currentPost)
 
     return (
         <div className="CurrentPost">
-            <h2>{currentPost.name}</h2>
-            <div className="AboutPost">
-                <img className="MainImagePost" src={currentPost.main} alt='Poster'/>
-                {morePostMemoizeed}
-            </div>
+            {currentPostMemoizeed}
         </div>
     )
+    
 })
