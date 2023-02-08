@@ -1,7 +1,7 @@
 import { setCategoriesNews } from "./categoriesNewsSlice";
 
 export const categoriesNewsThunk = (dispatch) => {
-    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/d96471996187e1d577b2b02fe174865e/raw/55378a5de0305d8044e3b21e5219d69a7cc4b862/NewsStarWars",
+    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/d96471996187e1d577b2b02fe174865e/raw/726d194941c61c43f4364e169fe6c3be0e8ba709/NewsStarWars",
         {
             method: 'get'
         }
