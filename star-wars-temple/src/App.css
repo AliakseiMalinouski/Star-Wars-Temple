@@ -623,8 +623,60 @@ li {
 
 }
 
+.FavouriteCharacters .ToolsFavourite {
+  background-color: #1d1e1f;
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 6px;
+}
+
+.FavouriteCharacters .WrapFinallyClan {
+  padding-top: 100px;
+  height: auto;
+  width: 100%;
+  animation: finallyClan 0.8s linear;
+}
+
+@keyframes finallyClan {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.FavouriteCharacters .WrapFinallyClan .FinallyClan {
+  color: white;
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 6px;
+  background-color: #1d1e1f;
+  height: 200px;
+  text-align: center;
+  line-height: 30px;
+  padding-top: 10px;
+}
+
+.FavouriteCharacters .WrapFinallyClan .FinallyClan span  {
+  font-size: 22px;
+  color: #fade4b;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 .FavouriteCharacters .ToolsFavourite .ClearFavouriteButton {
-  width: 15%;
+  width: 45%;
   height: 30px;
   border: none;
   cursor: pointer;
@@ -637,6 +689,25 @@ li {
 }
 
 .FavouriteCharacters .ToolsFavourite .ClearFavouriteButton:hover {
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+
+.FavouriteCharacters .ToolsFavourite .GenerateClanButton {
+  width: 45%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #fade4b;
+  border-radius: 6px;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 1s;
+}
+
+.FavouriteCharacters .ToolsFavourite .GenerateClanButton:hover {
   transition: 0.5s;
   opacity: 0.9;
 }

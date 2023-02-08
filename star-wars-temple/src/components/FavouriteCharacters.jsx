@@ -69,13 +69,15 @@ export const FavouriteCharacters = () => {
                     <button className="ClearFavouriteButton" type="button" onClick={clearLocalStorageFavourite}>Clear Favourite</button>
                     <br/>
                     <br/>
-                    <button type="button" onClick={generateFavouriteClan}>Generate clan</button>
+                    <button className="GenerateClanButton" style={{opacity: finallyCategory === "" ? "" : '0.3'}} disabled={finallyCategory === "" ? false : true} type="button" onClick={generateFavouriteClan}>Generate clan</button>
                 </div>
             }
             {
                 finallyCategory !== ""
                 ?
-                <div style={{color: 'white'}}>Your best category is {finallyCategory}</div>
+                <div className="WrapFinallyClan">
+                    <div className="FinallyClan">A calculation of the character types chosen shows that your favourite character type is <span>{finallyCategory}</span></div>
+                </div>
                 : 
                 null
             }
