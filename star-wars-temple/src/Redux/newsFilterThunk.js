@@ -1,7 +1,7 @@
 import { setFilterNews } from "./newsFilterSlice";
 
 export const newsFilterThunk = (dispatch) => {
-    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/3a24ebafc8a7ef46bcb59877cc4373aa/raw/4cac116f0463e40d316ef4359b1c557a20460a75/NewsFilterStarWars",
+    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/3a24ebafc8a7ef46bcb59877cc4373aa/raw/a6f69cd9aa67d02fe755383a1ce34e1d6d5b6e5e/NewsFilterStarWars",
         {
             method: 'get'
         }
