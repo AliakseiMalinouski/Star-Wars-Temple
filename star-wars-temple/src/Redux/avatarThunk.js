@@ -1,7 +1,7 @@
 import { setAvatars } from "./avatarSlice";
 
 export const avatarThunk = (dispatch) => {
-    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/ba16bb3d422fbc10bd65ff247ea2df11/raw/ec20d3dc6702be5a689861feb6fc0535d058abbd/HeroesIconsStarWars", 
+    fetch("https://gist.githubusercontent.com/AliakseiMalinouski/ba16bb3d422fbc10bd65ff247ea2df11/raw/32abc0fe3468f82fd4420af98e4eb7bca6e2d2fd/HeroesIconsStarWars", 
     {
         method: 'get'
     }
