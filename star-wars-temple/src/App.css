@@ -1480,3 +1480,72 @@ li {
   color: white;
   transform: scale(1.05);
 }
+
+
+.EmptyFavourite {
+  width: 100%;
+  background-color: #1d1e1f;
+  width: 40%;
+  margin: 0 auto;
+  height: 500px;
+  border-radius: 13px;
+  padding-top: 30px;
+}
+
+.EmptyFavourite h4 {
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 22px;
+}
+
+.EmptyFavourite .DefaultStateButton {
+  display: block;
+  margin: 0 auto;
+  transform: translateY(150px);
+  width: 60%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #fade4b;
+  border-radius: 6px;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.EmptyFavourite p {
+  width: 100%;
+  color: #B5B7B7;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.EmptyFavourite .OpenedStateButton {
+  display: block;
+  margin: 0 auto;
+  transform: translateY(20px);
+  width: 60%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #fade4b;
+  border-radius: 6px;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 1s;
+}
+
+.EmptyFavourite button:hover {
+  transition: 0.8s;
+  opacity: 0.9;
+}
+
+.EmptyFavourite img {
+  display: block;
+  margin: 0 auto;
+  width: 52%;
+}

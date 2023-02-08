@@ -3,6 +3,7 @@ import { useMemo, useEffect, useState } from "react";
 import { FavouriteCharacter } from "./FavouriteCharacter";
 import {removeHero} from '../Redux/favouriteSlice';
 import { useDispatch } from "react-redux";
+import { EmptyFavourite } from "./EmptyFavourite";
 
 export const FavouriteCharacters = () => {
 
@@ -61,7 +62,7 @@ export const FavouriteCharacters = () => {
             {
                 !favouriteCharactersInLocalStorage.length 
                 ?
-                null
+                <EmptyFavourite/>
                 :
                 <div className="ToolsFavourite">
                     <button type="button" onClick={clearLocalStorageFavourite}>Clear Favourite</button>
