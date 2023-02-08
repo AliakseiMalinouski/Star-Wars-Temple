@@ -1455,3 +1455,28 @@ li {
   transition: 0.5s;
   color: blue;
 }
+
+
+.ReturnToNewsPage {
+  padding-top: 30px;
+  color: #B5B7B7;
+  font-size: 20px;
+  display: flex;
+  width: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.ReturnToNewsPage img {
+  width: 40px;
+  transform: rotate(90deg);
+}
+
+
+.ReturnToNewsPage:hover {
+  transition: 0.5s;
+  color: white;
+  transform: scale(1.05);
+}

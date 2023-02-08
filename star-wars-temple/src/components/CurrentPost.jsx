@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { categoriesNewsThunk } from "../Redux/categoriesNewsThunk";
 import { useSelector, useDispatch } from "react-redux";
 import { InformationAboutCurrentPost } from "./InformationAboutCurrentPost";
+import { NavLink } from "react-router-dom";
 
 export const CurrentPost = React.memo(() => {
 
@@ -31,9 +32,12 @@ export const CurrentPost = React.memo(() => {
     )
 
     return (
+        <>
+        <NavLink to='/news' className="ReturnToNewsPage"><img src="https://img.icons8.com/color/256/star-wars-naboo-ship.png" alt="Star Wars Naboo Ship"/><span>Back to the news filter</span></NavLink>
         <div className="CurrentPost">
             {currentPostMemoizeed}
         </div>
+        </>
     )
     
 })
