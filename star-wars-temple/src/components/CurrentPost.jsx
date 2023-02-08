@@ -30,8 +30,6 @@ export const CurrentPost = React.memo(() => {
     <InformationAboutCurrentPost key={currentPost.code} item={currentPost}/>, [currentPost]
     )
 
-    console.log(currentPost)
-
     return (
         <div className="CurrentPost">
             {currentPostMemoizeed}

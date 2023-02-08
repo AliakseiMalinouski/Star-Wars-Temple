@@ -188,6 +188,16 @@ li {
   display: flex;
   justify-content: space-evenly;
   flex-flow: wrap;
+  animation: characters 0.8s linear;
+}
+
+@keyframes characters {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .Container .DataBank .Characters .Hero {
@@ -515,6 +525,16 @@ li {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  animation: films 0.8s linear;
+}
+
+@keyframes films {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .Films .Film {
@@ -641,6 +661,16 @@ li {
   justify-content: space-evenly;
   flex-flow: wrap;
   padding-top: 100px;
+  animation: series 0.8s linear;
+}
+
+@keyframes series {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .Series .Serial {
@@ -1051,6 +1081,16 @@ li {
   justify-content: space-between;
   flex-flow: wrap;
   padding-top: 100px;
+  animation: newGames 0.8s linear;
+}
+
+@keyframes newGames {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
  .NewGamesAndAppsTitle {
@@ -1262,6 +1302,21 @@ li {
 .News .NewsFilter {
   display: flex;
   justify-content: space-evenly;
+  padding-bottom: 100px;
+  animation: newsFilter 0.8s linear;
+}
+
+@keyframes newsFilter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.News .VaderLargeImage {
+  width: 100%;
 }
 
 .News .NewsFilter .NewsTitle {
@@ -1307,9 +1362,17 @@ li {
   color: white;
   margin: 0 auto;
   padding-top: 150px;
+  animation: currentPost 0.8s linear;
 }
 
-
+@keyframes currentPost {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .CurrentPost .AboutPost {
   width: 100%;
