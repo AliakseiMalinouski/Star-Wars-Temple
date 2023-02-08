@@ -29,6 +29,7 @@ export const FavouriteCharacters = () => {
         localStorage.removeItem("favouriteChacarters");
         setFavouriteCharactersInLocalStorage([]);
         dispatch(removeHero());
+        setFinallyCategory("");
     }
 
     const generateFavouriteClan = () => {
@@ -65,7 +66,7 @@ export const FavouriteCharacters = () => {
                 <EmptyFavourite/>
                 :
                 <div className="ToolsFavourite">
-                    <button type="button" onClick={clearLocalStorageFavourite}>Clear Favourite</button>
+                    <button className="ClearFavouriteButton" type="button" onClick={clearLocalStorageFavourite}>Clear Favourite</button>
                     <br/>
                     <br/>
                     <button type="button" onClick={generateFavouriteClan}>Generate clan</button>
