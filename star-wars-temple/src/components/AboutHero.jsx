@@ -102,7 +102,12 @@ export const AboutHero = React.memo(({currentHero})=> {
                     </div>
                 </div>
                 <div className="HistoryOfHero">
+                    {currentHero.about === undefined || currentHero.about === null || currentHero.about === []
+                    ?
+                    null
+                    :
                     <h2>History</h2>
+                    }
                         <div className="BordersHistoryTitle">
                             <div className="SmallBorderHistory"></div>
                             <div className="BigBorderHistory"></div>
@@ -110,7 +115,7 @@ export const AboutHero = React.memo(({currentHero})=> {
                     {
                         (currentHero.about === undefined || currentHero.about === null || currentHero.about === [])
                         ?
-                        <div>loading</div>
+                        null
                         :
                         currentHero.about.map(e => <HistoryOfHero key={e.code} text={e.text} image={e.image} title={e.title}/>)
                     }
