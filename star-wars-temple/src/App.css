@@ -207,6 +207,8 @@ li {
   border-radius: 13px;
   background-color: #202124;
   cursor: pointer;
+  margin-bottom: 30px;
+  margin-right: 10px;
 }
 
 .Container .DataBank .Characters .Hero:hover {

@@ -37,8 +37,9 @@ export const FavouriteCharacters = () => {
         let sith = favouriteCharactersInLocalStorage.filter(hero => hero.clan === 'Sith');
         let bountyHunter = favouriteCharactersInLocalStorage.filter(hero => hero.clan === 'Bounty Hunter');
         let droids = favouriteCharactersInLocalStorage.filter(hero => hero.clan === 'Confederation of Separatists');
-        let clansArray = [sith, bountyHunter, droids];
-        lengthArray.push(sith.length, bountyHunter.length, droids.length);
+        let empire = favouriteCharactersInLocalStorage.filter(hero => hero.clan === 'Galactic Empire');
+        let clansArray = [sith, bountyHunter, droids, empire];
+        lengthArray.push(sith.length, bountyHunter.length, droids.length, empire.length);
         let maxLengthOfClan = Math.max.apply(null, lengthArray);
         let resultClan = clansArray.find(elem => {
             return elem.length === maxLengthOfClan;
