@@ -15,6 +15,7 @@ export const Login = () => {
     const [loginPass, setLoginPass] = useState("");
     const [currentUser, setCurrentUser] = useState("");
     const [active, setActive] = useState(true);
+    const [validState, setValidState] = useState(false);
 
     useEffect(() => {
         onAuthStateChanged(auth, currentUser => {
@@ -23,13 +24,17 @@ export const Login = () => {
         })
     }, [allDataUser, dispatch]);
 
+    
+
     const loginUser = async () => {
         try {
             const user = await signInWithEmailAndPassword(auth, loginEmail, loginPass);
             dispatch(addUser(user));
+            if(validState) setValidState(false);
         }
         catch {
-            alert("Error with login");
+            alert("The e-mail address or password entered is incorrect. Please try again");
+            setValidState(true);
         }
     }
 
@@ -55,11 +60,18 @@ export const Login = () => {
         return (
             <div className="Login">
                 <div className="LoginImages">
-                    <img src="https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_disney_icon_158933.png" alt="Disney"/>
+                    <img src="https://img.icons8.com/fluency/256/disney-1.png" alt="Disney"/>
                     <img src="https://img.icons8.com/color/256/star-wars.png" alt="Star Wars"/>
                 </div>
                 <div className="LoginTools">
                     <input type='text' placeholder='email' value={loginEmail} onChange={loginEmailHandle}/>
+                    {
+                        validState
+                        ?
+                        <span>Example: <q>namesurname@gmail.com</q></span>
+                        :
+                        null
+                    }
                     <input type='text' placeholder='password' value={loginPass} onChange={loginPasswordHandle}/>
                     <button onClick={loginUser} style={{opacity: active ? '0.5' : '1'}} disabled={active}>Sign In</button>
                 </div>

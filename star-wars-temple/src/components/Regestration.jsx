@@ -15,6 +15,7 @@ export const Regestration = () => {
     const [regEmail, setRegEmail] = useState("");
     const [regPass, setRegPass] = useState("");
     const [currentUser, setCurrentUser] = useState("");
+    const [validState, setValidState] = useState(false);
 
     useEffect(() => {
         onAuthStateChanged(auth, currentUser => {
@@ -27,9 +28,11 @@ export const Regestration = () => {
         try {
             const user = await createUserWithEmailAndPassword(auth, regEmail, regPass);
             dispatch(addUser(user));
+            if(validState) setValidState(false);
         }
         catch {
-            alert("Error with regestration");
+            alert("The e-mail address you entered is incorrect. Please try again");
+            setValidState(true);
         }
     }
 
@@ -50,14 +53,24 @@ export const Regestration = () => {
 
     if(currentUser === "" || currentUser === undefined || currentUser === null) {
         return (
-            <div className="Authentication">
+           <div className="WrapperRegestration">
+                <div className="Authentication">
                 <div className="RegPart">
+                    <h2 style={{color: 'white'}}>Regestration</h2>
                     <input type='text' placeholder='email' value={regEmail} onChange={regestrationEmailHandle}/>
+                    {
+                        validState
+                        ?
+                        <span>Example: <q>namesurname@gmail.com</q></span>
+                        :
+                        null
+                    }
                     <input type='text' placeholder='password' value={regPass} onChange={regestrationPasswordHandle}/>
                     <button onClick={createUser}>Create user</button>
+                    <NavLink className='GoToSignInButton' to='/login'>Sign In</NavLink>
                 </div>
-                <NavLink style={{color: 'white'}} to='/login'>Sign In</NavLink>
             </div>
+           </div>
         )
     }
     else {
