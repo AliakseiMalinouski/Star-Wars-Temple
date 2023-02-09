@@ -32,7 +32,7 @@ export const HeroDetails = React.memo(() => {
     const addToFavouriteCharacters = useCallback((hero) => {
         let isIn = false;
         favouriteCharaters.forEach(elem => {
-            if(hero.code === elem.code || hero.type === 'locations') isIn = true;
+            if(hero.code === elem.code || hero.type === 'locations' || hero.type === 'creatures') isIn = true;
         });
         if(!isIn) dispatch(setHero(hero));
     }, [favouriteCharaters, dispatch]);

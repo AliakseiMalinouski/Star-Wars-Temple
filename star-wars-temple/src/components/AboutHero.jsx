@@ -17,7 +17,7 @@ export const AboutHero = React.memo(({currentHero})=> {
     const [typeHero, setTypeHero] = useState(false);
 
     useEffect(() => {
-        currentHero.type === 'locations' ? setTypeHero(true) : setTypeHero(false);
+        currentHero.type === 'locations' || currentHero.type === 'creatures' ? setTypeHero(true) : setTypeHero(false);
     }, [currentHero, setTypeHero]);
 
     useEffect(() => {
