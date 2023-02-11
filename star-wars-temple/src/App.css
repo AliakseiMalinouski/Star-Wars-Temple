@@ -2215,7 +2215,7 @@ li {
 
   .Header .Container .NavLinks a {
     width: 25%;
-
+    font-size: 10px;
   }
 
   .MoreSpecial img {
