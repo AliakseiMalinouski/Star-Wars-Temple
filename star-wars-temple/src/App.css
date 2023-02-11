@@ -2032,6 +2032,52 @@ li {
     width: 60%;
   }
 
+  .Container .HeroDetails .MoreAboutTheCharacter .WrapperAppearances {
+    border-right: none;
+    border-bottom: 1px solid #B5B7B7;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter .WrapperAffiliations {
+    border-right: none;
+    border-bottom: 1px solid #B5B7B7;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter .Gender {
+    border-right: none;
+    border-bottom: 1px solid #B5B7B7;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter .Gender p {
+    margin-bottom: 15px;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter .Species {
+    border-right: none;
+    border-bottom: 1px solid #B5B7B7;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter .Species p {
+    margin-bottom: 15px;
+  }
+
+   .Container .HeroDetails .MoreAboutTheCharacter .Vehicles {
+    border-right: none;
+    border-bottom: 1px solid #B5B7B7;
+   }
+
+   .Container .HeroDetails .MoreAboutTheCharacter .Vehicles p {
+    margin-bottom: 15px;
+   }
+
+   .Container .HeroDetails .MoreAboutTheCharacter .Weapon  {
+    border-right: none;
+    border-bottom: 1px solid #B5B7B7;
+   }
+   
+   .Container .HeroDetails .MoreAboutTheCharacter .Weapon p { 
+    margin-bottom: 15px;
+   }
+
   .Container .DataBank .Characters {
     justify-content: space-evenly;
   }
