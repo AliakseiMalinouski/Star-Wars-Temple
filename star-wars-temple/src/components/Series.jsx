@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {seriesThunk} from '../Redux/seriesThunk';
 import { Serial } from "./Serial";
@@ -13,6 +13,8 @@ export const Series = React.memo(() => {
     const series = useSelector(state => state.series.series);
     const posters = useSelector(state => state.posters.posters);
 
+    const [isResize, setIsResize] = useState(false);
+
     useEffect(() => {
         if(!series.length) dispatch(seriesThunk)
     }, [dispatch, series]);
@@ -20,6 +22,11 @@ export const Series = React.memo(() => {
     useEffect(() => {
         if(!posters.length) dispatch(postersThunk)
     }, [dispatch, posters]);
+
+    useEffect(() => {
+        let resize = window.matchMedia('(max-width: 760px)');
+        resize.matches ? setIsResize(true) : setIsResize(false);
+    }, [])
 
     let seriesMemoizeed = useMemo(() => series.map(e => <Serial 
     key={e.code}
@@ -43,9 +50,15 @@ export const Series = React.memo(() => {
             <div className='Series'>
                 {seriesMemoizeed}
             </div>
+            {
+                isResize
+                ?
+                null
+                :
             <div className="Posters">
                 {postersMemoizeed}
             </div>
+            }
         </>
     )
 })

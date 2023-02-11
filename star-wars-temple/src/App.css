@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: 1px solid red;
 }
 
 html {
@@ -1741,4 +1742,659 @@ li {
   display: block;
   margin: 0 auto;
   width: 52%;
+}
+
+@media all and (max-width: 1600px) {
+  .Container {
+    width: 1220px;
+  }
+
+  .Content .Container {
+    width: 1220px;
+  }
+
+  .Header .AuthTools {
+    right: 60px;
+  }
+
+  .Series .Serial  {
+    width: 21%;
+    margin-bottom: 30px;
+  }
+
+  .MoreFilm {
+    width: 100%;
+  }
+
+  .NewGames {
+    justify-content: center;
+  }
+
+  .NewGames .NewGame {
+    width: 35%;
+    margin-right: 20px;
+  }
+
+  .FavouriteCharacters .FavouriteHero {
+    height: 278px;
+  }
+
+  .CopyRight a {
+    font-size: 9px;
+  }
+}
+
+@media all and (max-width: 1220px) {
+  .Container {
+    width: 760px;
+  }
+
+  .Content .Container {
+    width: 760px;
+  }
+
+  .Container .DataBank {
+    flex-flow: wrap;
+    justify-content: flex-start;
+  }
+
+  .Container .DataBank .FilterDataBank {
+    width: 23%;
+    margin-bottom: 30px;
+  }
+
+  .Container .DataBank .Characters {
+    width: 100%;
+  }
+
+  .Container .HeroDetails {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .Container .HeroDetails .BrieflyAboutHero {
+    flex-flow: wrap;
+    margin-bottom: 330px;
+  }
+
+  .Container .HeroDetails .BrieflyAboutHero .HeroImageDetails {
+    width: 100%;
+  }
+
+  .Container .HeroDetails .BrieflyAboutHero .Description {
+    width: 100%;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter .WrapperAppearances {
+    width: 100%;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter .WrapperAffiliations {
+    width: 100%;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter .Species {
+    width: 100%;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter .Vehicles {
+    width: 100%;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter .Gender {
+    width: 100%;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter .Weapon {
+    width: 100%;
+  }
+
+  .Container .HeroDetails .MoreAboutTheCharacter div {
+    margin-bottom: 20px;
+  }
+
+  .Header .Container .NavLinks a {
+    font-size: 12px;
+  }
+
+  .Container .DataBank .FilterDataBank ul li {
+    font-size: 13px;
+  }
+
+  .Container .DataBank .FilterDataBank ul li span {
+    font-size: 12px;
+  }
+
+  .CopyRight a {
+    font-size: 5px;
+  }
+
+  .ReturnToNewsPage  {
+    width: 43%;
+  }
+
+  .Films .Film h4 {
+    font-size: 15px;
+  }
+
+  .MoreFilm {
+    flex-flow: wrap;
+  }
+
+  .MoreFilm .OtherInfoMoreFilm {
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .Series .Serial {
+    width: 35%;
+  }
+
+  .Posters .Poster .PosterText .ButtonsPoster {
+    width: 85%;
+  }
+
+  .Posters .Poster .PosterText p {
+    font-size: 24px;
+  }
+
+  .MoreSpecial .OtherInfoAboutSeries {
+    flex-flow: wrap;
+  }
+
+  .MoreSpecial .OtherInfoAboutSeries p {
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .NewGames .NewGame {
+    width: 60%;
+  }
+
+  .ConsoleAndPcGames .ConsoleAndPcGame {
+    height: 295px;
+    
+  }
+
+  .WrapperRegestration .Authentication {
+    width: 100%;
+  }
+
+  .Login {
+    width: 100%;
+  }
+
+  .LoggedUser {
+    width: 100%;
+  }
+
+  .EmptyFavourite {
+    width: 100%;
+  }
+
+  .FavouriteCharacters .HeroesCategory {
+    flex-flow: wrap;
+  }
+
+  .FavouriteCharacters .FavouriteHero {
+    width: 26%;
+    margin-bottom: 30px;
+  }
+
+  .FavouriteCharacters .FavouriteHero .RestOfInfoFavHero p {
+    font-size: 13px;
+  }
+
+  .FavouriteCharacters .FavouriteHero .RestOfInfoFavHero h3 {
+    font-size: 16px;
+  }
+
+  .FavouriteCharacters .ToolsFavourite {
+    width: 67%;
+  }
+
+  .FavouriteCharacters .WrapFinallyClan .FinallyClan {
+    width: 80%;
+  }
+
+  .CurrentPost  {
+    width: 100%;
+  }
+
+}
+
+@media all and (max-width: 760px) {
+  .Container {
+    width: 560px;
+  }
+
+  .Content .Container {
+    width: 560px;
+  }
+
+  .MoreFilm .OtherInfoMoreFilm h3 {
+    font-size: 23px;
+  }
+
+  .Header .Container .NavLinks a {
+    font-size: 9px;
+  }
+
+  .AuthTools span {
+    font-size: 14px;
+  }
+
+  .AuthTools img {
+    width: 33px !important;
+  }
+
+  .ReturnToNewsPage  {
+    width: 60%;
+  }
+
+  .Series .Serial {
+    width: 55%;
+  }
+
+  .MoreSpecial p {
+    width: 60%;
+  }
+
+  .Container .DataBank .Characters {
+    justify-content: space-evenly;
+  }
+
+  .Container .HeroDetails .BrieflyAboutHero .Description p {
+    line-height: 25px;
+  }
+
+  .Container .HistoryOfHero .Part h3 {
+    font-size: 35px;
+  }
+
+  .Container .HistoryOfHero .Part p {
+    font-size: 15px;
+  }
+
+  .Container .DataBank .FilterDataBank {
+    width: 50%;
+  }
+
+  .NewGames .NewGame {
+    width: 80%;
+  }
+
+  .MoreAboutNewGame .OtherInformationAboutTheNewGame {
+    flex-flow: wrap;
+  }
+
+  .MoreAboutNewGame .OtherInformationAboutTheNewGame img {
+    width: 100%;
+  }
+
+  .MoreAboutNewGame .OtherInformationAboutTheNewGame p {
+    width: 100%;
+  }
+
+  .MoreAboutNewGame .DateOfTheNewGame {
+    width: 100%;
+  }
+
+  .CopyRight {
+    flex-flow: wrap;
+  }
+
+  .CopyRight a {
+    font-size: 12px;
+  }
+
+  .SocialNetworks {
+    width: 100%;
+  }
+
+  .Streaming .Banner a {
+    font-size: 12px;
+  }
+
+  .AllInfoAboutUser li {
+    font-size: 16px;
+  }
+
+  .FavouriteCharacters .FavouriteHero {
+    height: 220px;
+  }
+
+  .FavouriteCharacters .FavouriteHero .RestOfInfoFavHero p {
+    font-size: 8px;
+  }
+
+  .Container .HeroDetails .BrieflyAboutHero .Description h2 {
+    font-size: 20px;
+  }
+
+  .FavouriteCharacters .FavouriteHero .RestOfInfoFavHero h3 {
+    font-size: 13px;
+  }
+}
+
+
+@media all and (max-width: 560px) {
+  .Container {
+    width: 100%;
+  }
+
+  .Content .Container {
+    width: 100%;
+  }
+
+  .Header .Container .NavLinks a {
+    font-size: 6px;
+  }
+
+  .Streaming .Banner a {
+    font-size: 8px;
+  }
+
+  .News h3 {
+    font-size: 26px;
+  }
+
+  .News .NewsFilter {
+    padding-bottom: 50px;
+    flex-flow: wrap;
+  }
+
+  .News .NewsFilter .NewsTitle {
+    margin-bottom: 7px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .ReturnToNewsPage  {
+    width: 100%;
+  }
+
+  .CurrentPost .AboutPost .MoreAboutPostNews a {
+    width: 100%;
+    font-size: 8px;
+  }
+
+
+  .CurrentPost .AboutPost .MoreAboutPostNews p {
+    font-size: 13px;
+  }
+
+  .MoreFilm .OtherInfoMoreFilm div {
+    flex-flow: wrap;
+  }
+
+  .Series .Serial {
+    width: 90%;
+  }
+
+  .Container .DataBank .FilterDataBank {
+    width: 100%;
+  }
+
+  .NewGames .NewGame {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .ConsoleAndPcGames .ConsoleAndPcGame h3 {
+    font-size: 9px;
+    padding-top: 10px;
+  }
+
+  .ConsoleAndPcGames .ConsoleAndPcGame {
+    height: 145px;
+  }
+
+  .CurrentConsoleOrPcGame {
+    flex-flow: wrap;
+  }
+
+  .CurrentConsoleOrPcGame img {
+    width: 100%;
+  }
+
+  .CurrentConsoleOrPcGame .MoreAboutCurrentConsoleOrPcGame {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .CurrentConsoleOrPcGame .MoreAboutCurrentConsoleOrPcGame a {
+    width: 100%;
+  }
+
+  .CurrentConsoleOrPcGame {
+    flex-wrap: wrap;
+  }
+
+  .CurrentConsoleOrPcGame img {
+    width: 100%;
+  }
+
+  .FavouriteCharacters .FavouriteHero {
+    height: 180px;
+  }
+  .FavouriteCharacters .FavouriteHero .RestOfInfoFavHero h3 {
+    font-size: 10px;
+  }
+
+  .Login .LoginImages img {
+    width: 40%;
+  }
+  .Login {
+    height: 440px;
+  }
+
+  .Streaming .Banner a {
+    text-align: center;
+  }
+
+  .News .NewsFilter {
+    padding-bottom: 28px;
+  }
+
+  .ReturnToNewsPage span {
+    font-size: 14px;
+  }
+
+  .Header .Container .NavLinks {
+    flex-flow: wrap;
+  }
+
+  .Header .Container .NavLinks a {
+    width: 25%;
+
+  }
+
+  .MoreSpecial img {
+    min-width: none;
+    width: 100%;
+  }
+
+  .MoreSpecial .OtherInfoAboutSeries p span {
+    font-size: 13px;
+  }
+
+  .SocialNetworks .SocialNetwork img {
+    width: 37px;
+  }
+
+  .MoreSpecial p {
+    flex-flow: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .MoreSpecial p span {
+    margin-bottom: 10px;
+  }
+
+  .Header .Container .Logo img {
+    width: 70%;
+  }
+
+  .Header .AuthTools {
+    top: 0px;
+  }
+
+  .AuthTools img {
+    width: 26px !important;
+  }
+
+  .AuthTools span {
+    font-size: 10px;
+  }
+
+  .MoreSpecial h2 {
+    text-align: center;
+  }
+
+  .Container .HeroDetails .BrieflyAboutHero {
+    height: auto;
+    margin-bottom: 0px;
+  }
+
+  .Container .HeroDetails {
+    padding-top: 40px;
+  }
+
+  .Container .HeroDetails .BrieflyAboutHero .Description .AddToFavButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .Container .HeroDetails .BrieflyAboutHero .Description {
+    padding-left: 0px;
+  }
+
+  .Films .Film {
+    width: auto;
+    min-width: 0;
+    margin-right: 0px;
+  }
+
+  .Films .Film img {
+    width: 100%;
+  }
+
+  .Films .Film h4 {
+    text-align: center;
+  }
+
+  .News {
+    padding-top: 30px;
+  }
+
+  .FilterFilms li {
+    font-size: 16px;
+  }
+
+  .MoreFilm img {
+    width: 100%;
+  }
+
+  .MoreFilm .OtherInfoMoreFilm h3 {
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .MoreFilm .OtherInfoMoreFilm p {
+    padding-left: 0px;
+  }
+
+  .MoreFilm .OtherInfoMoreFilm h5 {
+    padding-left: 0px;
+  }
+
+  .MoreFilm .OtherInfoMoreFilm div {
+    display: block;
+  }
+
+  .MoreFilm .OtherInfoMoreFilm div h6 {
+    margin-left: 0px;
+  }
+
+  .NewGames .NewGame p {
+    font-size: 11px;
+  }
+
+  .FavouriteCharacters .FavouriteHero {
+    height: 142px;
+  }
+
+  .FavouriteCharacters .FavouriteHero .RestOfInfoFavHero {
+    padding-top: 8px;
+  }
+
+  .FavouriteCharacters .ToolsFavourite {
+    width: 100%;
+  }
+
+  .FavouriteCharacters .ToolsFavourite .ClearFavouriteButton {
+    font-size: 14px;
+  }
+
+  .FavouriteCharacters .ToolsFavourite .GenerateClanButton {
+    font-size: 14px;
+  }
+
+  .FavouriteCharacters .WrapFinallyClan .FinallyClan {
+    width: 100%;
+  }
+
+  .WrapperRegestration  {
+    padding-top: 25px;
+  }
+
+  .Login {
+    height: 350px;
+  }
+
+  .LoggedUser h3{
+    text-align: center;
+  }
+  .Login .LoginTools input {
+    width: 95%;
+  }
+
+  .WrapperRegestration .Authentication .RegPart input {
+    width: 95%;
+  }
+
+  .FavouriteCharacters .HeroesCategory {
+    padding-bottom: 0px;
+  }
+
+  .FavouriteCharacters {
+    padding-top: 30px;
+  }
+
+  .FavouriteCharacters .WrapFinallyClan {
+    padding-top: 20px;
+  }
+
+  .Series {
+    padding-top: 30px;
+  }
+
+  .Films {
+    padding-top: 30px;
+  }
+
+  .FilteringByFilm {
+    padding-top: 30px;
+  }
+
+  .Films .Film .InformationFilms {
+    padding-left: 0px;
+  }
 }
