@@ -69,17 +69,10 @@ export const News = React.memo(() => {
                         <div className="ClosedFilterNews" onClick={openCategoriesNews}>
                             Choose
                         </div>
-                        <img src="https://lumiere-a.akamaihd.net/v1/images/vr-hero-desktop_25626109.jpeg?region=0,0,2048,870" alt="Poster"/>
                     </div>
                 }
             </div>
-           {
-            filterState
-            ?
             <img className="VaderLargeImage" src="https://lumiere-a.akamaihd.net/v1/images/vr-hero-desktop_25626109.jpeg?region=0,0,2048,870" alt="Poster"/>
-            :
-            null
-           }
         </div>
     )
 })
