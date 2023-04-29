@@ -75,7 +75,7 @@ export const Header = React.memo(() => {
                 {
                     currentUser === "" || currentUser === undefined || currentUser === null || currentUser === {}
                     ?
-                    <><img style={{width: '40px'}} src="https://cdn.icon-icons.com/icons2/2126/PNG/512/the_emperor_star_wars_icon_131346.png" alt="Person"/><span>Sign In</span> </>
+                    <><img style={{width: '40px'}} src="https://i.ibb.co/ssJq2SY/user-2.png" alt="Person"/><span>Sign In</span> </>
                     :
                     <><img style={{width: '40px'}} src={currentAvatar} alt="Person"/> <span>{currentUser}</span></>
                 }
